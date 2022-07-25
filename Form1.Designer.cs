@@ -117,7 +117,6 @@ namespace skater
             // 
             // boardSpeedTimer
             // 
-            this.boardSpeedTimer.Interval = 10;
             this.boardSpeedTimer.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // disableRogdollCB
