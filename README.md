@@ -9,3 +9,5 @@
     Skate.crack.exe utility tool made by kikkin_yo_azzez#4943
   </p>
 </div>
+[![screenshot][screenshot]]
+[screenshot]: images/screenshot.png
