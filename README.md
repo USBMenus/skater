@@ -9,5 +9,5 @@
     Skate.crack.exe utility tool made by kikkin_yo_azzez#4943
   </p>
 </div>
-[![screenshot][screenshot]]
+[![screenshot][screenshot]](https://github.com/usbmenus/skater)
 [screenshot]: images/screenshot.png
