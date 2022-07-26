@@ -8,6 +8,8 @@
   <p align="center">
     Skate.crack.exe utility tool made by kikkin_yo_azzez#4943
   </p>
+  <h1 align="center">update log</h1>
+  <br>
   v1.0
   <br>
   initial release
