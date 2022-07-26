@@ -29,11 +29,6 @@ namespace skater
             checkGame();
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            mem.WriteMemory("Skate.crack.exe+084DAE50,40,20,8,A8", "float", on);
-        }
-
         void checkGame()
         {
             Process[] proc = Process.GetProcessesByName("Skate.crack");
@@ -184,22 +179,9 @@ namespace skater
         private void guna2ToggleSwitch2_CheckedChanged_1(object sender, EventArgs e)
         {
             if (speedHackTS.Checked)
-                boardSpeedTimer.Start();
+                mem.FreezeValue("Skate.crack.exe+084DAE50,40,20,8,A8", "float", on);
             else
-                boardSpeedTimer.Stop();
-        }
-
-        private void guna2HtmlToolTip1_Popup(object sender, PopupEventArgs e)
-        {
-
-        }
-
-        private void consoleTS_CheckedChanged(object sender, EventArgs e)
-        {
-            if (consoleTS.Checked)
-                mem.WriteMemory("Skate.crack.exe+08324788,8", "byte", on);
-            else
-                mem.WriteMemory("Skate.crack.exe+08324788,8", "byte", off);
+                mem.UnfreezeValue("Skate.crack.exe+084DAE50,40,20,8,A8");
         }
 
         private void guna2ToggleSwitch1_CheckedChanged_1(object sender, EventArgs e)
@@ -255,7 +237,6 @@ namespace skater
             rainbowHueTS.Enabled = true;
             sunRotationTS.Enabled = true;
             speedHackTS.Enabled = true;
-            consoleTS.Enabled = true;
             lockInAirTS.Enabled = true;
             wireframeTS.Enabled = true;
             disableRagdollTS.Enabled = true;
@@ -269,7 +250,6 @@ namespace skater
             rainbowHueTS.Enabled = false;
             sunRotationTS.Enabled = false;
             speedHackTS.Enabled = false;
-            consoleTS.Enabled = false;
             lockInAirTS.Enabled = false;
             wireframeTS.Enabled = false;
             disableRagdollTS.Enabled = false;
@@ -281,6 +261,16 @@ namespace skater
         }
 
         private void guna2NumericUpDown1_ValueChanged_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void consoleLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void consoleTS_CheckedChanged(object sender, EventArgs e)
         {
 
         }
