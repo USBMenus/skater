@@ -10,9 +10,13 @@
   </p>
   v1.0
   <br>
+  initial release
+  <br>
 <img src="images/screenshot.PNG" alt="v1.0">
   <br>
   v2.0
+  <br>
+  updated ui and removed some options
   <br>
 <img src="images/image.png" alt="v2.0">
 </div>
