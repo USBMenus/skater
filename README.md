@@ -16,7 +16,7 @@
   <br>
   v2.0
   <br>
-  updated ui and removed some options
+  updated ui and removed and added some options
   <br>
 <img src="images/image.png" alt="v2.0">
   <br>
