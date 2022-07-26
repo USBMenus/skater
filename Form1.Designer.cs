@@ -31,128 +31,253 @@ namespace skater
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.fixSkateboardCB = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.boardSpeedUD = new System.Windows.Forms.NumericUpDown();
             this.boardSpeedTimer = new System.Windows.Forms.Timer(this.components);
-            this.disableRogdollCB = new System.Windows.Forms.CheckBox();
-            this.disableWipeoutsCB = new System.Windows.Forms.CheckBox();
-            this.fovUD = new System.Windows.Forms.NumericUpDown();
-            this.sunRotationXUD = new System.Windows.Forms.NumericUpDown();
-            this.sunRotationYUD = new System.Windows.Forms.NumericUpDown();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.sunRotationLabel = new System.Windows.Forms.Label();
             this.madeByLabel = new System.Windows.Forms.Label();
-            this.wireframeCB = new System.Windows.Forms.CheckBox();
-            this.wireframeUD = new System.Windows.Forms.NumericUpDown();
-            this.fovCB = new System.Windows.Forms.CheckBox();
-            this.drawSkinnedCB = new System.Windows.Forms.CheckBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.satXUD = new System.Windows.Forms.NumericUpDown();
-            this.satYUD = new System.Windows.Forms.NumericUpDown();
-            this.satZUD = new System.Windows.Forms.NumericUpDown();
-            this.label7 = new System.Windows.Forms.Label();
-            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
-            this.rainbowCB = new System.Windows.Forms.CheckBox();
-            this.rainbowUD = new System.Windows.Forms.NumericUpDown();
-            this.label8 = new System.Windows.Forms.Label();
-            this.consoleCB = new System.Windows.Forms.CheckBox();
-            ((System.ComponentModel.ISupportInitialize)(this.boardSpeedUD)).BeginInit();
+            this.fovTB = new Guna.UI2.WinForms.Guna2TrackBar();
+            this.fovLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.fovTS = new Guna.UI2.WinForms.Guna2ToggleSwitch();
+            this.rainbowHueTS = new Guna.UI2.WinForms.Guna2ToggleSwitch();
+            this.rainbowHueLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.rainbowHueTB = new Guna.UI2.WinForms.Guna2TrackBar();
+            this.lockInAirTS = new Guna.UI2.WinForms.Guna2ToggleSwitch();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.disableRagdollTS = new Guna.UI2.WinForms.Guna2ToggleSwitch();
+            this.disableRogdollLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.rainbowHueUD = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.statusLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.fovUD = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.checkIfGameOpen = new System.Windows.Forms.Timer(this.components);
+            this.statusInfoLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.attachErrLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.opacityLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.opacityTB = new Guna.UI2.WinForms.Guna2TrackBar();
+            this.disableWipeoutsTS = new Guna.UI2.WinForms.Guna2ToggleSwitch();
+            this.disableWipeoutsLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.speedHackTS = new Guna.UI2.WinForms.Guna2ToggleSwitch();
+            this.speedHackLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.wireframeTS = new Guna.UI2.WinForms.Guna2ToggleSwitch();
+            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.consoleTS = new Guna.UI2.WinForms.Guna2ToggleSwitch();
+            this.consoleLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.drawPlayersTS = new Guna.UI2.WinForms.Guna2ToggleSwitch();
+            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.sunRotationUD = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.sunRotationTS = new Guna.UI2.WinForms.Guna2ToggleSwitch();
+            this.sunRotationLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.sunRotationTB = new Guna.UI2.WinForms.Guna2TrackBar();
+            ((System.ComponentModel.ISupportInitialize)(this.rainbowHueUD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fovUD)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sunRotationXUD)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sunRotationYUD)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.wireframeUD)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.satXUD)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.satYUD)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.satZUD)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rainbowUD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sunRotationUD)).BeginInit();
             this.SuspendLayout();
-            // 
-            // fixSkateboardCB
-            // 
-            this.fixSkateboardCB.AutoSize = true;
-            this.fixSkateboardCB.BackColor = System.Drawing.Color.Black;
-            this.fixSkateboardCB.ForeColor = System.Drawing.Color.White;
-            this.fixSkateboardCB.Location = new System.Drawing.Point(12, 35);
-            this.fixSkateboardCB.Name = "fixSkateboardCB";
-            this.fixSkateboardCB.Size = new System.Drawing.Size(113, 17);
-            this.fixSkateboardCB.TabIndex = 2;
-            this.fixSkateboardCB.Text = "Enable Lock In Air";
-            this.fixSkateboardCB.UseVisualStyleBackColor = false;
-            this.fixSkateboardCB.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.BackColor = System.Drawing.Color.Black;
-            this.checkBox3.ForeColor = System.Drawing.Color.White;
-            this.checkBox3.Location = new System.Drawing.Point(15, 282);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(88, 17);
-            this.checkBox3.TabIndex = 6;
-            this.checkBox3.Text = "Board Speed";
-            this.checkBox3.UseVisualStyleBackColor = false;
-            this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
-            // 
-            // boardSpeedUD
-            // 
-            this.boardSpeedUD.BackColor = System.Drawing.Color.Black;
-            this.boardSpeedUD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.boardSpeedUD.Enabled = false;
-            this.boardSpeedUD.ForeColor = System.Drawing.Color.White;
-            this.boardSpeedUD.Location = new System.Drawing.Point(134, 281);
-            this.boardSpeedUD.Maximum = new decimal(new int[] {
-            2147483647,
-            0,
-            0,
-            0});
-            this.boardSpeedUD.Name = "boardSpeedUD";
-            this.boardSpeedUD.Size = new System.Drawing.Size(65, 20);
-            this.boardSpeedUD.TabIndex = 7;
             // 
             // boardSpeedTimer
             // 
+            this.boardSpeedTimer.Interval = 10;
             this.boardSpeedTimer.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // disableRogdollCB
+            // madeByLabel
             // 
-            this.disableRogdollCB.AutoSize = true;
-            this.disableRogdollCB.BackColor = System.Drawing.Color.Black;
-            this.disableRogdollCB.ForeColor = System.Drawing.Color.White;
-            this.disableRogdollCB.Location = new System.Drawing.Point(12, 58);
-            this.disableRogdollCB.Name = "disableRogdollCB";
-            this.disableRogdollCB.Size = new System.Drawing.Size(100, 17);
-            this.disableRogdollCB.TabIndex = 3;
-            this.disableRogdollCB.Text = "Disable Ragdoll";
-            this.disableRogdollCB.UseVisualStyleBackColor = false;
-            this.disableRogdollCB.CheckedChanged += new System.EventHandler(this.checkBox4_CheckedChanged);
+            this.madeByLabel.AutoSize = true;
+            this.madeByLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.madeByLabel.Location = new System.Drawing.Point(9, 165);
+            this.madeByLabel.Name = "madeByLabel";
+            this.madeByLabel.Size = new System.Drawing.Size(161, 16);
+            this.madeByLabel.TabIndex = 17;
+            this.madeByLabel.Text = "Made by kikkin_yo_azzez";
             // 
-            // disableWipeoutsCB
+            // fovTB
             // 
-            this.disableWipeoutsCB.AutoSize = true;
-            this.disableWipeoutsCB.BackColor = System.Drawing.Color.Black;
-            this.disableWipeoutsCB.ForeColor = System.Drawing.Color.White;
-            this.disableWipeoutsCB.Location = new System.Drawing.Point(12, 81);
-            this.disableWipeoutsCB.Name = "disableWipeoutsCB";
-            this.disableWipeoutsCB.Size = new System.Drawing.Size(109, 17);
-            this.disableWipeoutsCB.TabIndex = 4;
-            this.disableWipeoutsCB.Text = "Disable Wipeouts";
-            this.disableWipeoutsCB.UseVisualStyleBackColor = false;
-            this.disableWipeoutsCB.CheckedChanged += new System.EventHandler(this.checkBox5_CheckedChanged);
+            this.fovTB.Enabled = false;
+            this.fovTB.Location = new System.Drawing.Point(255, 12);
+            this.fovTB.Maximum = 180;
+            this.fovTB.Minimum = -1;
+            this.fovTB.Name = "fovTB";
+            this.fovTB.Size = new System.Drawing.Size(273, 23);
+            this.fovTB.TabIndex = 3;
+            this.fovTB.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(113)))), ((int)(((byte)(255)))));
+            this.fovTB.Value = -1;
+            this.fovTB.Scroll += new System.Windows.Forms.ScrollEventHandler(this.fovSlider_Scroll);
+            // 
+            // fovLabel
+            // 
+            this.fovLabel.BackColor = System.Drawing.Color.Transparent;
+            this.fovLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fovLabel.ForeColor = System.Drawing.Color.White;
+            this.fovLabel.Location = new System.Drawing.Point(55, 12);
+            this.fovLabel.Name = "fovLabel";
+            this.fovLabel.Size = new System.Drawing.Size(33, 20);
+            this.fovLabel.TabIndex = 39;
+            this.fovLabel.Text = "FOV";
+            // 
+            // fovTS
+            // 
+            this.fovTS.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.fovTS.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(113)))), ((int)(((byte)(255)))));
+            this.fovTS.CheckedState.InnerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.fovTS.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.fovTS.Location = new System.Drawing.Point(12, 12);
+            this.fovTS.Name = "fovTS";
+            this.fovTS.Size = new System.Drawing.Size(35, 20);
+            this.fovTS.TabIndex = 0;
+            this.fovTS.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.fovTS.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.fovTS.UncheckedState.InnerBorderColor = System.Drawing.Color.White;
+            this.fovTS.UncheckedState.InnerColor = System.Drawing.Color.White;
+            this.fovTS.CheckedChanged += new System.EventHandler(this.fovTS_CheckedChanged);
+            // 
+            // rainbowHueTS
+            // 
+            this.rainbowHueTS.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.rainbowHueTS.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(113)))), ((int)(((byte)(255)))));
+            this.rainbowHueTS.CheckedState.InnerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.rainbowHueTS.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.rainbowHueTS.Location = new System.Drawing.Point(12, 38);
+            this.rainbowHueTS.Name = "rainbowHueTS";
+            this.rainbowHueTS.Size = new System.Drawing.Size(35, 20);
+            this.rainbowHueTS.TabIndex = 4;
+            this.rainbowHueTS.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.rainbowHueTS.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.rainbowHueTS.UncheckedState.InnerBorderColor = System.Drawing.Color.White;
+            this.rainbowHueTS.UncheckedState.InnerColor = System.Drawing.Color.White;
+            this.rainbowHueTS.CheckedChanged += new System.EventHandler(this.rainbowHueTS_CheckedChanged);
+            // 
+            // rainbowHueLabel
+            // 
+            this.rainbowHueLabel.BackColor = System.Drawing.Color.Transparent;
+            this.rainbowHueLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rainbowHueLabel.ForeColor = System.Drawing.Color.White;
+            this.rainbowHueLabel.Location = new System.Drawing.Point(55, 38);
+            this.rainbowHueLabel.Name = "rainbowHueLabel";
+            this.rainbowHueLabel.Size = new System.Drawing.Size(92, 20);
+            this.rainbowHueLabel.TabIndex = 49;
+            this.rainbowHueLabel.Text = "Rainbow Hue";
+            // 
+            // rainbowHueTB
+            // 
+            this.rainbowHueTB.Enabled = false;
+            this.rainbowHueTB.LargeChange = 1;
+            this.rainbowHueTB.Location = new System.Drawing.Point(255, 38);
+            this.rainbowHueTB.Maximum = 359;
+            this.rainbowHueTB.Minimum = 1;
+            this.rainbowHueTB.MouseWheelBarPartitions = 359;
+            this.rainbowHueTB.Name = "rainbowHueTB";
+            this.rainbowHueTB.Size = new System.Drawing.Size(273, 23);
+            this.rainbowHueTB.TabIndex = 6;
+            this.rainbowHueTB.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(113)))), ((int)(((byte)(255)))));
+            this.rainbowHueTB.Value = 1;
+            this.rainbowHueTB.Scroll += new System.Windows.Forms.ScrollEventHandler(this.rainbowHueSlider_Scroll);
+            // 
+            // lockInAirTS
+            // 
+            this.lockInAirTS.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.lockInAirTS.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(113)))), ((int)(((byte)(255)))));
+            this.lockInAirTS.CheckedState.InnerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.lockInAirTS.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.lockInAirTS.Location = new System.Drawing.Point(12, 142);
+            this.lockInAirTS.Name = "lockInAirTS";
+            this.lockInAirTS.Size = new System.Drawing.Size(35, 20);
+            this.lockInAirTS.TabIndex = 12;
+            this.lockInAirTS.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.lockInAirTS.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.lockInAirTS.UncheckedState.InnerBorderColor = System.Drawing.Color.White;
+            this.lockInAirTS.UncheckedState.InnerColor = System.Drawing.Color.White;
+            this.lockInAirTS.CheckedChanged += new System.EventHandler(this.guna2ToggleSwitch1_CheckedChanged);
+            // 
+            // guna2HtmlLabel1
+            // 
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.White;
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(55, 142);
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(72, 20);
+            this.guna2HtmlLabel1.TabIndex = 52;
+            this.guna2HtmlLabel1.Text = "Lock In Air";
+            // 
+            // disableRagdollTS
+            // 
+            this.disableRagdollTS.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.disableRagdollTS.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(113)))), ((int)(((byte)(255)))));
+            this.disableRagdollTS.CheckedState.InnerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.disableRagdollTS.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.disableRagdollTS.Location = new System.Drawing.Point(381, 90);
+            this.disableRagdollTS.Name = "disableRagdollTS";
+            this.disableRagdollTS.Size = new System.Drawing.Size(35, 20);
+            this.disableRagdollTS.TabIndex = 15;
+            this.disableRagdollTS.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.disableRagdollTS.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.disableRagdollTS.UncheckedState.InnerBorderColor = System.Drawing.Color.White;
+            this.disableRagdollTS.UncheckedState.InnerColor = System.Drawing.Color.White;
+            this.disableRagdollTS.CheckedChanged += new System.EventHandler(this.guna2ToggleSwitch2_CheckedChanged);
+            // 
+            // disableRogdollLabel
+            // 
+            this.disableRogdollLabel.BackColor = System.Drawing.Color.Transparent;
+            this.disableRogdollLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.disableRogdollLabel.ForeColor = System.Drawing.Color.White;
+            this.disableRogdollLabel.Location = new System.Drawing.Point(424, 90);
+            this.disableRogdollLabel.Name = "disableRogdollLabel";
+            this.disableRogdollLabel.Size = new System.Drawing.Size(106, 20);
+            this.disableRogdollLabel.TabIndex = 54;
+            this.disableRogdollLabel.Text = "Disable Ragdoll";
+            // 
+            // rainbowHueUD
+            // 
+            this.rainbowHueUD.AutoRoundedCorners = true;
+            this.rainbowHueUD.BackColor = System.Drawing.Color.Transparent;
+            this.rainbowHueUD.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(113)))), ((int)(((byte)(255)))));
+            this.rainbowHueUD.BorderRadius = 10;
+            this.rainbowHueUD.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.rainbowHueUD.Enabled = false;
+            this.rainbowHueUD.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.rainbowHueUD.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.rainbowHueUD.ForeColor = System.Drawing.Color.White;
+            this.rainbowHueUD.Location = new System.Drawing.Point(188, 38);
+            this.rainbowHueUD.Maximum = new decimal(new int[] {
+            359,
+            0,
+            0,
+            0});
+            this.rainbowHueUD.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.rainbowHueUD.Name = "rainbowHueUD";
+            this.rainbowHueUD.Size = new System.Drawing.Size(61, 23);
+            this.rainbowHueUD.TabIndex = 5;
+            this.rainbowHueUD.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(113)))), ((int)(((byte)(255)))));
+            this.rainbowHueUD.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.rainbowHueUD.ValueChanged += new System.EventHandler(this.guna2NumericUpDown1_ValueChanged);
+            // 
+            // statusLabel
+            // 
+            this.statusLabel.BackColor = System.Drawing.Color.Transparent;
+            this.statusLabel.ForeColor = System.Drawing.Color.White;
+            this.statusLabel.Location = new System.Drawing.Point(422, 150);
+            this.statusLabel.Name = "statusLabel";
+            this.statusLabel.Size = new System.Drawing.Size(36, 15);
+            this.statusLabel.TabIndex = 58;
+            this.statusLabel.Text = "Status: ";
             // 
             // fovUD
             // 
-            this.fovUD.BackColor = System.Drawing.Color.Black;
+            this.fovUD.AutoRoundedCorners = true;
+            this.fovUD.BackColor = System.Drawing.Color.Transparent;
+            this.fovUD.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(113)))), ((int)(((byte)(255)))));
+            this.fovUD.BorderRadius = 10;
+            this.fovUD.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.fovUD.Enabled = false;
+            this.fovUD.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.fovUD.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.fovUD.ForeColor = System.Drawing.Color.White;
-            this.fovUD.Location = new System.Drawing.Point(134, 235);
+            this.fovUD.Location = new System.Drawing.Point(188, 12);
             this.fovUD.Maximum = new decimal(new int[] {
-            179,
+            180,
             0,
             0,
             0});
@@ -162,396 +287,354 @@ namespace skater
             0,
             -2147483648});
             this.fovUD.Name = "fovUD";
-            this.fovUD.Size = new System.Drawing.Size(65, 20);
-            this.fovUD.TabIndex = 5;
+            this.fovUD.Size = new System.Drawing.Size(61, 23);
+            this.fovUD.TabIndex = 2;
+            this.fovUD.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(113)))), ((int)(((byte)(255)))));
             this.fovUD.Value = new decimal(new int[] {
             1,
             0,
             0,
             -2147483648});
-            this.fovUD.ValueChanged += new System.EventHandler(this.numericUpDown2_ValueChanged);
+            this.fovUD.ValueChanged += new System.EventHandler(this.guna2NumericUpDown1_ValueChanged_1);
             // 
-            // sunRotationXUD
+            // checkIfGameOpen
             // 
-            this.sunRotationXUD.BackColor = System.Drawing.Color.Black;
-            this.sunRotationXUD.ForeColor = System.Drawing.Color.White;
-            this.sunRotationXUD.Location = new System.Drawing.Point(134, 166);
-            this.sunRotationXUD.Maximum = new decimal(new int[] {
-            100000,
+            this.checkIfGameOpen.Enabled = true;
+            this.checkIfGameOpen.Interval = 1000;
+            this.checkIfGameOpen.Tick += new System.EventHandler(this.checkIfGameOpen_Tick);
+            // 
+            // statusInfoLabel
+            // 
+            this.statusInfoLabel.BackColor = System.Drawing.Color.Transparent;
+            this.statusInfoLabel.ForeColor = System.Drawing.Color.White;
+            this.statusInfoLabel.Location = new System.Drawing.Point(459, 150);
+            this.statusInfoLabel.Name = "statusInfoLabel";
+            this.statusInfoLabel.Size = new System.Drawing.Size(66, 15);
+            this.statusInfoLabel.TabIndex = 60;
+            this.statusInfoLabel.Text = "Not Attached";
+            // 
+            // attachErrLabel
+            // 
+            this.attachErrLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.attachErrLabel.BackColor = System.Drawing.Color.Transparent;
+            this.attachErrLabel.ForeColor = System.Drawing.Color.White;
+            this.attachErrLabel.Location = new System.Drawing.Point(419, 166);
+            this.attachErrLabel.Name = "attachErrLabel";
+            this.attachErrLabel.Size = new System.Drawing.Size(113, 15);
+            this.attachErrLabel.TabIndex = 61;
+            this.attachErrLabel.Text = "No Instances Detected";
+            // 
+            // opacityLabel
+            // 
+            this.opacityLabel.BackColor = System.Drawing.Color.Transparent;
+            this.opacityLabel.ForeColor = System.Drawing.Color.White;
+            this.opacityLabel.Location = new System.Drawing.Point(176, 166);
+            this.opacityLabel.Name = "opacityLabel";
+            this.opacityLabel.Size = new System.Drawing.Size(39, 15);
+            this.opacityLabel.TabIndex = 62;
+            this.opacityLabel.Text = "Opacity";
+            // 
+            // opacityTB
+            // 
+            this.opacityTB.Location = new System.Drawing.Point(221, 168);
+            this.opacityTB.Minimum = 1;
+            this.opacityTB.Name = "opacityTB";
+            this.opacityTB.Size = new System.Drawing.Size(151, 13);
+            this.opacityTB.Style = Guna.UI2.WinForms.Enums.TrackBarStyle.Metro;
+            this.opacityTB.TabIndex = 17;
+            this.opacityTB.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(113)))), ((int)(((byte)(255)))));
+            this.opacityTB.Value = 85;
+            this.opacityTB.Scroll += new System.Windows.Forms.ScrollEventHandler(this.guna2TrackBar1_Scroll);
+            // 
+            // disableWipeoutsTS
+            // 
+            this.disableWipeoutsTS.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.disableWipeoutsTS.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(113)))), ((int)(((byte)(255)))));
+            this.disableWipeoutsTS.CheckedState.InnerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.disableWipeoutsTS.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.disableWipeoutsTS.Location = new System.Drawing.Point(188, 116);
+            this.disableWipeoutsTS.Name = "disableWipeoutsTS";
+            this.disableWipeoutsTS.Size = new System.Drawing.Size(35, 20);
+            this.disableWipeoutsTS.TabIndex = 16;
+            this.disableWipeoutsTS.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.disableWipeoutsTS.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.disableWipeoutsTS.UncheckedState.InnerBorderColor = System.Drawing.Color.White;
+            this.disableWipeoutsTS.UncheckedState.InnerColor = System.Drawing.Color.White;
+            this.disableWipeoutsTS.CheckedChanged += new System.EventHandler(this.disableWipeoutsTS_CheckedChanged);
+            // 
+            // disableWipeoutsLabel
+            // 
+            this.disableWipeoutsLabel.BackColor = System.Drawing.Color.Transparent;
+            this.disableWipeoutsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.disableWipeoutsLabel.ForeColor = System.Drawing.Color.White;
+            this.disableWipeoutsLabel.Location = new System.Drawing.Point(231, 116);
+            this.disableWipeoutsLabel.Name = "disableWipeoutsLabel";
+            this.disableWipeoutsLabel.Size = new System.Drawing.Size(119, 20);
+            this.disableWipeoutsLabel.TabIndex = 64;
+            this.disableWipeoutsLabel.Text = "Disable Wipeouts";
+            // 
+            // speedHackTS
+            // 
+            this.speedHackTS.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.speedHackTS.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(113)))), ((int)(((byte)(255)))));
+            this.speedHackTS.CheckedState.InnerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.speedHackTS.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.speedHackTS.Location = new System.Drawing.Point(12, 90);
+            this.speedHackTS.Name = "speedHackTS";
+            this.speedHackTS.Size = new System.Drawing.Size(35, 20);
+            this.speedHackTS.TabIndex = 10;
+            this.speedHackTS.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.speedHackTS.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.speedHackTS.UncheckedState.InnerBorderColor = System.Drawing.Color.White;
+            this.speedHackTS.UncheckedState.InnerColor = System.Drawing.Color.White;
+            this.speedHackTS.CheckedChanged += new System.EventHandler(this.guna2ToggleSwitch2_CheckedChanged_1);
+            // 
+            // speedHackLabel
+            // 
+            this.speedHackLabel.BackColor = System.Drawing.Color.Transparent;
+            this.speedHackLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.speedHackLabel.ForeColor = System.Drawing.Color.White;
+            this.speedHackLabel.Location = new System.Drawing.Point(55, 90);
+            this.speedHackLabel.Name = "speedHackLabel";
+            this.speedHackLabel.Size = new System.Drawing.Size(84, 20);
+            this.speedHackLabel.TabIndex = 66;
+            this.speedHackLabel.Text = "Speed Hack";
+            // 
+            // wireframeTS
+            // 
+            this.wireframeTS.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.wireframeTS.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(113)))), ((int)(((byte)(255)))));
+            this.wireframeTS.CheckedState.InnerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.wireframeTS.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.wireframeTS.Location = new System.Drawing.Point(381, 116);
+            this.wireframeTS.Name = "wireframeTS";
+            this.wireframeTS.Size = new System.Drawing.Size(35, 20);
+            this.wireframeTS.TabIndex = 13;
+            this.wireframeTS.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.wireframeTS.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.wireframeTS.UncheckedState.InnerBorderColor = System.Drawing.Color.White;
+            this.wireframeTS.UncheckedState.InnerColor = System.Drawing.Color.White;
+            this.wireframeTS.CheckedChanged += new System.EventHandler(this.guna2ToggleSwitch1_CheckedChanged_1);
+            // 
+            // guna2HtmlLabel3
+            // 
+            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.White;
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(424, 116);
+            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(114, 20);
+            this.guna2HtmlLabel3.TabIndex = 68;
+            this.guna2HtmlLabel3.Text = "Wireframe Mode";
+            // 
+            // consoleTS
+            // 
+            this.consoleTS.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.consoleTS.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(113)))), ((int)(((byte)(255)))));
+            this.consoleTS.CheckedState.InnerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.consoleTS.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.consoleTS.Location = new System.Drawing.Point(12, 116);
+            this.consoleTS.Name = "consoleTS";
+            this.consoleTS.Size = new System.Drawing.Size(35, 20);
+            this.consoleTS.TabIndex = 11;
+            this.consoleTS.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.consoleTS.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.consoleTS.UncheckedState.InnerBorderColor = System.Drawing.Color.White;
+            this.consoleTS.UncheckedState.InnerColor = System.Drawing.Color.White;
+            this.consoleTS.CheckedChanged += new System.EventHandler(this.consoleTS_CheckedChanged);
+            // 
+            // consoleLabel
+            // 
+            this.consoleLabel.BackColor = System.Drawing.Color.Transparent;
+            this.consoleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.consoleLabel.ForeColor = System.Drawing.Color.White;
+            this.consoleLabel.Location = new System.Drawing.Point(55, 116);
+            this.consoleLabel.Name = "consoleLabel";
+            this.consoleLabel.Size = new System.Drawing.Size(59, 20);
+            this.consoleLabel.TabIndex = 70;
+            this.consoleLabel.Text = "Console";
+            // 
+            // drawPlayersTS
+            // 
+            this.drawPlayersTS.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.drawPlayersTS.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(113)))), ((int)(((byte)(255)))));
+            this.drawPlayersTS.CheckedState.InnerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.drawPlayersTS.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.drawPlayersTS.Location = new System.Drawing.Point(188, 93);
+            this.drawPlayersTS.Name = "drawPlayersTS";
+            this.drawPlayersTS.Size = new System.Drawing.Size(35, 20);
+            this.drawPlayersTS.TabIndex = 14;
+            this.drawPlayersTS.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.drawPlayersTS.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.drawPlayersTS.UncheckedState.InnerBorderColor = System.Drawing.Color.White;
+            this.drawPlayersTS.UncheckedState.InnerColor = System.Drawing.Color.White;
+            this.drawPlayersTS.CheckedChanged += new System.EventHandler(this.guna2ToggleSwitch2_CheckedChanged_2);
+            // 
+            // guna2HtmlLabel2
+            // 
+            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.White;
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(231, 93);
+            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(144, 20);
+            this.guna2HtmlLabel2.TabIndex = 72;
+            this.guna2HtmlLabel2.Text = "Disable Draw Players";
+            // 
+            // sunRotationUD
+            // 
+            this.sunRotationUD.AutoRoundedCorners = true;
+            this.sunRotationUD.BackColor = System.Drawing.Color.Transparent;
+            this.sunRotationUD.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(113)))), ((int)(((byte)(255)))));
+            this.sunRotationUD.BorderRadius = 10;
+            this.sunRotationUD.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.sunRotationUD.Enabled = false;
+            this.sunRotationUD.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.sunRotationUD.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.sunRotationUD.ForeColor = System.Drawing.Color.White;
+            this.sunRotationUD.Location = new System.Drawing.Point(188, 64);
+            this.sunRotationUD.Maximum = new decimal(new int[] {
+            10000,
             0,
             0,
             0});
-            this.sunRotationXUD.Name = "sunRotationXUD";
-            this.sunRotationXUD.Size = new System.Drawing.Size(65, 20);
-            this.sunRotationXUD.TabIndex = 8;
-            this.sunRotationXUD.ValueChanged += new System.EventHandler(this.numericUpDown4_ValueChanged);
+            this.sunRotationUD.Name = "sunRotationUD";
+            this.sunRotationUD.Size = new System.Drawing.Size(61, 23);
+            this.sunRotationUD.TabIndex = 8;
+            this.sunRotationUD.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(113)))), ((int)(((byte)(255)))));
+            this.sunRotationUD.ValueChanged += new System.EventHandler(this.sunRotationUD_ValueChanged);
             // 
-            // sunRotationYUD
+            // sunRotationTS
             // 
-            this.sunRotationYUD.BackColor = System.Drawing.Color.Black;
-            this.sunRotationYUD.ForeColor = System.Drawing.Color.White;
-            this.sunRotationYUD.Location = new System.Drawing.Point(134, 188);
-            this.sunRotationYUD.Maximum = new decimal(new int[] {
-            100000,
-            0,
-            0,
-            0});
-            this.sunRotationYUD.Name = "sunRotationYUD";
-            this.sunRotationYUD.Size = new System.Drawing.Size(65, 20);
-            this.sunRotationYUD.TabIndex = 9;
-            this.sunRotationYUD.ValueChanged += new System.EventHandler(this.numericUpDown5_ValueChanged);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Black;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(112, 169);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(16, 16);
-            this.label2.TabIndex = 14;
-            this.label2.Text = "X";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Black;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(111, 192);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(17, 16);
-            this.label3.TabIndex = 15;
-            this.label3.Text = "Y";
+            this.sunRotationTS.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.sunRotationTS.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(113)))), ((int)(((byte)(255)))));
+            this.sunRotationTS.CheckedState.InnerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.sunRotationTS.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.sunRotationTS.Location = new System.Drawing.Point(12, 64);
+            this.sunRotationTS.Name = "sunRotationTS";
+            this.sunRotationTS.Size = new System.Drawing.Size(35, 20);
+            this.sunRotationTS.TabIndex = 7;
+            this.sunRotationTS.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.sunRotationTS.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.sunRotationTS.UncheckedState.InnerBorderColor = System.Drawing.Color.White;
+            this.sunRotationTS.UncheckedState.InnerColor = System.Drawing.Color.White;
+            this.sunRotationTS.CheckedChanged += new System.EventHandler(this.sunRotationTS_CheckedChanged);
             // 
             // sunRotationLabel
             // 
-            this.sunRotationLabel.AutoSize = true;
-            this.sunRotationLabel.BackColor = System.Drawing.Color.Black;
-            this.sunRotationLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sunRotationLabel.BackColor = System.Drawing.Color.Transparent;
+            this.sunRotationLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sunRotationLabel.ForeColor = System.Drawing.Color.White;
-            this.sunRotationLabel.Location = new System.Drawing.Point(115, 147);
+            this.sunRotationLabel.Location = new System.Drawing.Point(55, 64);
             this.sunRotationLabel.Name = "sunRotationLabel";
-            this.sunRotationLabel.Size = new System.Drawing.Size(84, 16);
-            this.sunRotationLabel.TabIndex = 16;
+            this.sunRotationLabel.Size = new System.Drawing.Size(89, 20);
+            this.sunRotationLabel.TabIndex = 75;
             this.sunRotationLabel.Text = "Sun Rotation";
             // 
-            // madeByLabel
+            // sunRotationTB
             // 
-            this.madeByLabel.AutoSize = true;
-            this.madeByLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.madeByLabel.Location = new System.Drawing.Point(12, 302);
-            this.madeByLabel.Name = "madeByLabel";
-            this.madeByLabel.Size = new System.Drawing.Size(161, 16);
-            this.madeByLabel.TabIndex = 17;
-            this.madeByLabel.Text = "Made by kikkin_yo_azzez";
-            // 
-            // wireframeCB
-            // 
-            this.wireframeCB.AutoSize = true;
-            this.wireframeCB.Location = new System.Drawing.Point(15, 259);
-            this.wireframeCB.Name = "wireframeCB";
-            this.wireframeCB.Size = new System.Drawing.Size(110, 17);
-            this.wireframeCB.TabIndex = 18;
-            this.wireframeCB.Text = "Enable Wireframe";
-            this.wireframeCB.UseVisualStyleBackColor = true;
-            this.wireframeCB.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged_1);
-            // 
-            // wireframeUD
-            // 
-            this.wireframeUD.BackColor = System.Drawing.Color.Black;
-            this.wireframeUD.Enabled = false;
-            this.wireframeUD.ForeColor = System.Drawing.Color.White;
-            this.wireframeUD.Location = new System.Drawing.Point(134, 258);
-            this.wireframeUD.Maximum = new decimal(new int[] {
-            3,
-            0,
-            0,
-            0});
-            this.wireframeUD.Name = "wireframeUD";
-            this.wireframeUD.Size = new System.Drawing.Size(65, 20);
-            this.wireframeUD.TabIndex = 19;
-            this.wireframeUD.ValueChanged += new System.EventHandler(this.wireframeUD_ValueChanged);
-            // 
-            // fovCB
-            // 
-            this.fovCB.AutoSize = true;
-            this.fovCB.Location = new System.Drawing.Point(15, 236);
-            this.fovCB.Name = "fovCB";
-            this.fovCB.Size = new System.Drawing.Size(47, 17);
-            this.fovCB.TabIndex = 20;
-            this.fovCB.Text = "FOV";
-            this.fovCB.UseVisualStyleBackColor = true;
-            this.fovCB.CheckedChanged += new System.EventHandler(this.fovCB_CheckedChanged);
-            // 
-            // drawSkinnedCB
-            // 
-            this.drawSkinnedCB.AutoSize = true;
-            this.drawSkinnedCB.Location = new System.Drawing.Point(12, 104);
-            this.drawSkinnedCB.Name = "drawSkinnedCB";
-            this.drawSkinnedCB.Size = new System.Drawing.Size(143, 17);
-            this.drawSkinnedCB.TabIndex = 21;
-            this.drawSkinnedCB.Text = "Disable Draw Characters";
-            this.drawSkinnedCB.UseVisualStyleBackColor = true;
-            this.drawSkinnedCB.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged_2);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 147);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 16);
-            this.label1.TabIndex = 22;
-            this.label1.Text = "Saturation";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(59, 171);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(14, 13);
-            this.label4.TabIndex = 23;
-            this.label4.Text = "X";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(59, 194);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(14, 13);
-            this.label5.TabIndex = 24;
-            this.label5.Text = "Y";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(59, 214);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(14, 13);
-            this.label6.TabIndex = 25;
-            this.label6.Text = "Z";
-            // 
-            // satXUD
-            // 
-            this.satXUD.BackColor = System.Drawing.Color.Black;
-            this.satXUD.ForeColor = System.Drawing.Color.White;
-            this.satXUD.Location = new System.Drawing.Point(15, 166);
-            this.satXUD.Name = "satXUD";
-            this.satXUD.Size = new System.Drawing.Size(38, 20);
-            this.satXUD.TabIndex = 26;
-            this.satXUD.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.satXUD.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
-            // 
-            // satYUD
-            // 
-            this.satYUD.BackColor = System.Drawing.Color.Black;
-            this.satYUD.ForeColor = System.Drawing.Color.White;
-            this.satYUD.Location = new System.Drawing.Point(15, 188);
-            this.satYUD.Name = "satYUD";
-            this.satYUD.Size = new System.Drawing.Size(38, 20);
-            this.satYUD.TabIndex = 27;
-            this.satYUD.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.satYUD.ValueChanged += new System.EventHandler(this.satYUD_ValueChanged);
-            // 
-            // satZUD
-            // 
-            this.satZUD.BackColor = System.Drawing.Color.Black;
-            this.satZUD.ForeColor = System.Drawing.Color.White;
-            this.satZUD.Location = new System.Drawing.Point(15, 210);
-            this.satZUD.Name = "satZUD";
-            this.satZUD.Size = new System.Drawing.Size(38, 20);
-            this.satZUD.TabIndex = 28;
-            this.satZUD.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.satZUD.ValueChanged += new System.EventHandler(this.satZUD_ValueChanged);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(115, 212);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(33, 16);
-            this.label7.TabIndex = 29;
-            this.label7.Text = "Hue";
-            // 
-            // numericUpDown4
-            // 
-            this.numericUpDown4.BackColor = System.Drawing.Color.Black;
-            this.numericUpDown4.ForeColor = System.Drawing.Color.White;
-            this.numericUpDown4.Location = new System.Drawing.Point(154, 210);
-            this.numericUpDown4.Maximum = new decimal(new int[] {
-            360,
-            0,
-            0,
-            0});
-            this.numericUpDown4.Name = "numericUpDown4";
-            this.numericUpDown4.Size = new System.Drawing.Size(45, 20);
-            this.numericUpDown4.TabIndex = 30;
-            this.numericUpDown4.ValueChanged += new System.EventHandler(this.numericUpDown4_ValueChanged_1);
-            // 
-            // rainbowCB
-            // 
-            this.rainbowCB.AutoSize = true;
-            this.rainbowCB.Location = new System.Drawing.Point(12, 127);
-            this.rainbowCB.Name = "rainbowCB";
-            this.rainbowCB.Size = new System.Drawing.Size(91, 17);
-            this.rainbowCB.TabIndex = 31;
-            this.rainbowCB.Text = "Rainbow Hue";
-            this.rainbowCB.UseVisualStyleBackColor = true;
-            this.rainbowCB.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged_3);
-            // 
-            // rainbowUD
-            // 
-            this.rainbowUD.BackColor = System.Drawing.Color.Black;
-            this.rainbowUD.ForeColor = System.Drawing.Color.White;
-            this.rainbowUD.Location = new System.Drawing.Point(151, 124);
-            this.rainbowUD.Maximum = new decimal(new int[] {
-            360,
-            0,
-            0,
-            0});
-            this.rainbowUD.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.rainbowUD.Name = "rainbowUD";
-            this.rainbowUD.Size = new System.Drawing.Size(45, 20);
-            this.rainbowUD.TabIndex = 32;
-            this.rainbowUD.Value = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            this.rainbowUD.ValueChanged += new System.EventHandler(this.rainbowUD_ValueChanged);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(102, 126);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(43, 15);
-            this.label8.TabIndex = 33;
-            this.label8.Text = "Speed";
-            // 
-            // consoleCB
-            // 
-            this.consoleCB.AutoSize = true;
-            this.consoleCB.BackColor = System.Drawing.Color.Black;
-            this.consoleCB.ForeColor = System.Drawing.Color.White;
-            this.consoleCB.Location = new System.Drawing.Point(12, 12);
-            this.consoleCB.Name = "consoleCB";
-            this.consoleCB.Size = new System.Drawing.Size(100, 17);
-            this.consoleCB.TabIndex = 34;
-            this.consoleCB.Text = "Enable Console";
-            this.consoleCB.UseVisualStyleBackColor = false;
-            this.consoleCB.CheckedChanged += new System.EventHandler(this.consoleCB_CheckedChanged);
+            this.sunRotationTB.Enabled = false;
+            this.sunRotationTB.Location = new System.Drawing.Point(255, 64);
+            this.sunRotationTB.Maximum = 10000;
+            this.sunRotationTB.Name = "sunRotationTB";
+            this.sunRotationTB.Size = new System.Drawing.Size(273, 23);
+            this.sunRotationTB.TabIndex = 9;
+            this.sunRotationTB.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(113)))), ((int)(((byte)(255)))));
+            this.sunRotationTB.Value = 0;
+            this.sunRotationTB.Scroll += new System.Windows.Forms.ScrollEventHandler(this.sunRotationTB_Scroll);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(208, 325);
-            this.Controls.Add(this.consoleCB);
-            this.Controls.Add(this.rainbowUD);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.rainbowCB);
-            this.Controls.Add(this.numericUpDown4);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.satZUD);
-            this.Controls.Add(this.satYUD);
-            this.Controls.Add(this.satXUD);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.drawSkinnedCB);
-            this.Controls.Add(this.fovCB);
-            this.Controls.Add(this.wireframeUD);
-            this.Controls.Add(this.wireframeCB);
-            this.Controls.Add(this.madeByLabel);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.ClientSize = new System.Drawing.Size(540, 186);
+            this.Controls.Add(this.sunRotationUD);
+            this.Controls.Add(this.sunRotationTS);
             this.Controls.Add(this.sunRotationLabel);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.sunRotationYUD);
-            this.Controls.Add(this.sunRotationXUD);
+            this.Controls.Add(this.sunRotationTB);
+            this.Controls.Add(this.drawPlayersTS);
+            this.Controls.Add(this.guna2HtmlLabel2);
+            this.Controls.Add(this.consoleTS);
+            this.Controls.Add(this.consoleLabel);
+            this.Controls.Add(this.wireframeTS);
+            this.Controls.Add(this.guna2HtmlLabel3);
+            this.Controls.Add(this.speedHackTS);
+            this.Controls.Add(this.speedHackLabel);
+            this.Controls.Add(this.disableWipeoutsTS);
+            this.Controls.Add(this.disableWipeoutsLabel);
+            this.Controls.Add(this.opacityTB);
+            this.Controls.Add(this.opacityLabel);
+            this.Controls.Add(this.attachErrLabel);
+            this.Controls.Add(this.statusInfoLabel);
             this.Controls.Add(this.fovUD);
-            this.Controls.Add(this.disableWipeoutsCB);
-            this.Controls.Add(this.disableRogdollCB);
-            this.Controls.Add(this.boardSpeedUD);
-            this.Controls.Add(this.checkBox3);
-            this.Controls.Add(this.fixSkateboardCB);
+            this.Controls.Add(this.statusLabel);
+            this.Controls.Add(this.rainbowHueUD);
+            this.Controls.Add(this.disableRagdollTS);
+            this.Controls.Add(this.disableRogdollLabel);
+            this.Controls.Add(this.lockInAirTS);
+            this.Controls.Add(this.guna2HtmlLabel1);
+            this.Controls.Add(this.rainbowHueTS);
+            this.Controls.Add(this.rainbowHueLabel);
+            this.Controls.Add(this.rainbowHueTB);
+            this.Controls.Add(this.fovTS);
+            this.Controls.Add(this.fovLabel);
+            this.Controls.Add(this.fovTB);
+            this.Controls.Add(this.madeByLabel);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Form1";
+            this.Opacity = 0.85D;
             this.Text = "skater";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.boardSpeedUD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rainbowHueUD)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fovUD)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sunRotationXUD)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sunRotationYUD)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.wireframeUD)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.satXUD)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.satYUD)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.satZUD)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rainbowUD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sunRotationUD)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.CheckBox fixSkateboardCB;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.NumericUpDown boardSpeedUD;
         private System.Windows.Forms.Timer boardSpeedTimer;
-        private System.Windows.Forms.CheckBox disableRogdollCB;
-        private System.Windows.Forms.CheckBox disableWipeoutsCB;
-        private System.Windows.Forms.NumericUpDown fovUD;
-        private System.Windows.Forms.NumericUpDown sunRotationXUD;
-        private System.Windows.Forms.NumericUpDown sunRotationYUD;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label sunRotationLabel;
         private System.Windows.Forms.Label madeByLabel;
-        private System.Windows.Forms.CheckBox wireframeCB;
-        private System.Windows.Forms.NumericUpDown wireframeUD;
-        private System.Windows.Forms.CheckBox fovCB;
-        private System.Windows.Forms.CheckBox drawSkinnedCB;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.NumericUpDown satXUD;
-        private System.Windows.Forms.NumericUpDown satYUD;
-        private System.Windows.Forms.NumericUpDown satZUD;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.NumericUpDown numericUpDown4;
-        private System.Windows.Forms.CheckBox rainbowCB;
-        private System.Windows.Forms.NumericUpDown rainbowUD;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.CheckBox consoleCB;
+        private Guna.UI2.WinForms.Guna2TrackBar fovTB;
+        private Guna.UI2.WinForms.Guna2HtmlLabel fovLabel;
+        private Guna.UI2.WinForms.Guna2ToggleSwitch fovTS;
+        private Guna.UI2.WinForms.Guna2ToggleSwitch rainbowHueTS;
+        private Guna.UI2.WinForms.Guna2HtmlLabel rainbowHueLabel;
+        private Guna.UI2.WinForms.Guna2TrackBar rainbowHueTB;
+        private Guna.UI2.WinForms.Guna2ToggleSwitch lockInAirTS;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private Guna.UI2.WinForms.Guna2ToggleSwitch disableRagdollTS;
+        private Guna.UI2.WinForms.Guna2HtmlLabel disableRogdollLabel;
+        private Guna.UI2.WinForms.Guna2NumericUpDown rainbowHueUD;
+        private Guna.UI2.WinForms.Guna2HtmlLabel statusLabel;
+        private Guna.UI2.WinForms.Guna2NumericUpDown fovUD;
+        private System.Windows.Forms.Timer checkIfGameOpen;
+        private Guna.UI2.WinForms.Guna2HtmlLabel statusInfoLabel;
+        private Guna.UI2.WinForms.Guna2HtmlLabel attachErrLabel;
+        private Guna.UI2.WinForms.Guna2HtmlLabel opacityLabel;
+        private Guna.UI2.WinForms.Guna2TrackBar opacityTB;
+        private Guna.UI2.WinForms.Guna2ToggleSwitch disableWipeoutsTS;
+        private Guna.UI2.WinForms.Guna2HtmlLabel disableWipeoutsLabel;
+        private Guna.UI2.WinForms.Guna2ToggleSwitch speedHackTS;
+        private Guna.UI2.WinForms.Guna2HtmlLabel speedHackLabel;
+        private Guna.UI2.WinForms.Guna2ToggleSwitch wireframeTS;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
+        private Guna.UI2.WinForms.Guna2ToggleSwitch consoleTS;
+        private Guna.UI2.WinForms.Guna2HtmlLabel consoleLabel;
+        private Guna.UI2.WinForms.Guna2ToggleSwitch drawPlayersTS;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
+        private Guna.UI2.WinForms.Guna2NumericUpDown sunRotationUD;
+        private Guna.UI2.WinForms.Guna2ToggleSwitch sunRotationTS;
+        private Guna.UI2.WinForms.Guna2HtmlLabel sunRotationLabel;
+        private Guna.UI2.WinForms.Guna2TrackBar sunRotationTB;
     }
 }
 

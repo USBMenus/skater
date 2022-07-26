@@ -18,19 +18,10 @@ namespace skater
         public Mem mem = new Mem();
         public string on = "1";
         public string off = "0";
-        Process[] proc = Process.GetProcessesByName("Skate.crack");
 
         public Form1()
         {
             InitializeComponent();
-        }
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-            if (fixSkateboardCB.Checked)
-                mem.WriteMemory("Skate.crack.exe+5618A20", "byte", on);
-            else
-                mem.WriteMemory("Skate.crack.exe+5618A20", "byte", off);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -40,135 +31,41 @@ namespace skater
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            mem.WriteMemory("Skate.crack.exe+084DAE50,40,20,8,A8", "float", boardSpeedUD.Value.ToString());
-        }
-
-        private void checkBox3_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBox3.Checked)
-            {
-                boardSpeedTimer.Start();
-                boardSpeedUD.Enabled = true;
-            }
-            else
-            {
-                boardSpeedTimer.Stop();
-                boardSpeedUD.Enabled = false;
-            }
-        }
-
-        private void checkBox4_CheckedChanged(object sender, EventArgs e)
-        {
-            if (disableRogdollCB.Checked)
-                mem.WriteMemory("Skate.crack.exe+53D4740", "byte", on);
-            else
-                mem.WriteMemory("Skate.crack.exe+53D4740", "byte", off);
-        }
-
-        private void checkBox5_CheckedChanged(object sender, EventArgs e)
-        {
-            if (disableWipeoutsCB.Checked)
-                mem.WriteMemory("Skate.crack.exe+56248D0", "byte", on);
-            else
-                mem.WriteMemory("Skate.crack.exe+56248D0", "byte", off);
-        }
-
-        private void numericUpDown2_ValueChanged(object sender, EventArgs e)
-        {
-            mem.WriteMemory("Skate.crack.exe+08135380,40,80C", "float", fovUD.Value.ToString());
-        }
-
-        private void numericUpDown4_ValueChanged(object sender, EventArgs e)
-        {
-            mem.WriteMemory("Skate.crack.exe+0565DF80,A0,28,24", "float", sunRotationXUD.Value.ToString());
-        }
-
-        private void numericUpDown5_ValueChanged(object sender, EventArgs e)
-        {
-            mem.WriteMemory("Skate.crack.exe+0565DF80,A0,28,28", "float", sunRotationYUD.Value.ToString());
+            mem.WriteMemory("Skate.crack.exe+084DAE50,40,20,8,A8", "float", on);
         }
 
         void checkGame()
         {
+            Process[] proc = Process.GetProcessesByName("Skate.crack");
             if (proc.Length == 1)
             {
                 mem.OpenProcess(Process.GetProcessesByName("Skate.crack").FirstOrDefault().Id);
-                MessageBox.Show("Successfully attached to skate", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                statusInfoLabel.Text = "Attached";
+                statusInfoLabel.ForeColor = Color.Green;
+                attachErrLabel.Text = "Successfully Attached";
+                attachErrLabel.Location = new Point(422, attachErrLabel.Location.Y);
+                enableAll();
             }
             else if (proc.Length == 0)
             {
-                MessageBox.Show("No instances detected\nMake sure the game is running", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Application.Exit();
+                statusInfoLabel.Text = "Not Attached";
+                statusInfoLabel.ForeColor = Color.Red;
+                attachErrLabel.Text = "No Instances Detected";
+                attachErrLabel.Location = new Point(415, attachErrLabel.Location.Y);
+                disableAll();
             } else
             {
-                MessageBox.Show("Too many instances detected \nMake sure you only have one game open", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Application.Exit();
+                statusInfoLabel.Text = "Not Attached";
+                statusInfoLabel.ForeColor = Color.Red;
+                attachErrLabel.Text = "Too Many Instances Detected";
+                attachErrLabel.Location = new Point(381,attachErrLabel.Location.Y);
+                disableAll();
             }
-        }
-
-        private void checkBox1_CheckedChanged_1(object sender, EventArgs e)
-        {
-            if (wireframeCB.Checked)
-                wireframeUD.Enabled = true;
-            else
-                wireframeUD.Enabled = false;
-        }
-
-        private void fovCB_CheckedChanged(object sender, EventArgs e)
-        {
-            if (fovCB.Checked)
-                fovUD.Enabled = true;
-            else
-                fovUD.Enabled = false;
-        }
-
-        private void wireframeUD_ValueChanged(object sender, EventArgs e)
-        {
-            mem.WriteMemory("Skate.crack.exe+08331A58,17C", "int", wireframeUD.Value.ToString());
         }
 
         private void checkBox1_CheckedChanged_2(object sender, EventArgs e)
         {
-            if (drawSkinnedCB.Checked)
-            mem.WriteMemory("Skate.crack.exe+5600D70", "byte", off);
-            else
-            mem.WriteMemory("Skate.crack.exe+5600D70", "byte", on);
-        }
-
-        private void numericUpDown4_ValueChanged_1(object sender, EventArgs e)
-        {
-            mem.WriteMemory("Skate.crack.exe+08411500,16C", "float", numericUpDown4.Value.ToString());
-        }
-
-        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
-        {
-            mem.WriteMemory("Skate.crack.exe+08411500,40", "float", satXUD.Value.ToString());
-        }
-
-        private void satYUD_ValueChanged(object sender, EventArgs e)
-        {
-            mem.WriteMemory("Skate.crack.exe+08411500,44", "float", satYUD.Value.ToString());
-        }
-
-        private void satZUD_ValueChanged(object sender, EventArgs e)
-        {
-            mem.WriteMemory("Skate.crack.exe+08411500,48", "float", satZUD.Value.ToString());
-        }
-
-        private void checkBox1_CheckedChanged_3(object sender, EventArgs e)
-        {
-            if (rainbowCB.Checked)
-                for (int i = 0; i < 360; i++)
-                {
-                    mem.WriteMemory("Skate.crack.exe+08411500,16C", "float", (rainbowUD.Value*i).ToString());
-                    wait(1);
-                    if (i == 359)
-                        i = 0;
-                    if (!rainbowCB.Checked)
-                        break;
-                }
-            else
-                mem.WriteMemory("Skate.crack.exe+08411500,16C", "float", off);
+            
         }
 
         public void wait(int milliseconds)
@@ -192,17 +89,195 @@ namespace skater
             }
         }
 
-        private void consoleCB_CheckedChanged(object sender, EventArgs e)
+        private void rainbowHueSlider_Scroll(object sender, ScrollEventArgs e)
         {
-            if (consoleCB.Checked)
+            rainbowHueUD.Value = rainbowHueTB.Value;
+        }
+
+        private void guna2NumericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+            rainbowHueTB.Value = Convert.ToInt32(rainbowHueUD.Value);
+        }
+
+        private void guna2NumericUpDown1_ValueChanged_1(object sender, EventArgs e)
+        {
+            fovTB.Value = Convert.ToInt32(fovUD.Value);
+            mem.WriteMemory("Skate.crack.exe+08135380,40,80C", "float", fovUD.Value.ToString());
+        }
+
+        private void fovTS_CheckedChanged(object sender, EventArgs e)
+        {
+            if (fovTS.Checked)
+            {
+                fovUD.Enabled = true;
+                fovTB.Enabled = true;
+            }
+            else
+            {
+                fovUD.Enabled = false;
+                fovTB.Enabled = false;
+            }
+        }
+
+        private void rainbowHueTS_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rainbowHueTS.Checked)
+            {
+                rainbowHueTB.Enabled = true;
+                rainbowHueUD.Enabled = true;
+            }
+            else
+            {
+                rainbowHueTB.Enabled = false;
+                rainbowHueUD.Enabled = false;
+            }
+            if (rainbowHueTS.Checked)
+                for (int i = 0; i < 360; i++)
+                {
+                    mem.WriteMemory("Skate.crack.exe+08411500,16C", "float", (rainbowHueUD.Value * i).ToString());
+                    wait(1);
+                    if (i == 359)
+                        i = 0;
+                    if (!rainbowHueTS.Checked)
+                        break;
+                }
+            else
+            {
+                mem.WriteMemory("Skate.crack.exe+08411500,16C", "float", off);
+            }
+        }
+
+        private void checkIfGameOpen_Tick(object sender, EventArgs e)
+        {
+            checkGame();
+        }
+
+        private void guna2ToggleSwitch1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (lockInAirTS.Checked)
+                mem.WriteMemory("Skate.crack.exe+5618A20", "byte", on);
+            else
+                mem.WriteMemory("Skate.crack.exe+5618A20", "byte", off);
+        }
+
+        private void guna2TrackBar1_Scroll(object sender, ScrollEventArgs e)
+        {
+            this.Opacity = (double)opacityTB.Value/opacityTB.Maximum; 
+        }
+
+        private void guna2ToggleSwitch2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (disableRagdollTS.Checked)
+                mem.WriteMemory("Skate.crack.exe+53D4740", "byte", on);
+            else
+                mem.WriteMemory("Skate.crack.exe+53D4740", "byte", off);
+        }
+
+        private void disableWipeoutsTS_CheckedChanged(object sender, EventArgs e)
+        {
+            if (disableWipeoutsTS.Checked)
+                mem.WriteMemory("Skate.crack.exe+56248D0", "byte", on);
+            else
+                mem.WriteMemory("Skate.crack.exe+56248D0", "byte", off);
+        }
+
+        private void guna2ToggleSwitch2_CheckedChanged_1(object sender, EventArgs e)
+        {
+            if (speedHackTS.Checked)
+                boardSpeedTimer.Start();
+            else
+                boardSpeedTimer.Stop();
+        }
+
+        private void guna2HtmlToolTip1_Popup(object sender, PopupEventArgs e)
+        {
+
+        }
+
+        private void consoleTS_CheckedChanged(object sender, EventArgs e)
+        {
+            if (consoleTS.Checked)
                 mem.WriteMemory("Skate.crack.exe+08324788,8", "byte", on);
             else
                 mem.WriteMemory("Skate.crack.exe+08324788,8", "byte", off);
         }
 
-        private void rainbowUD_ValueChanged(object sender, EventArgs e)
+        private void guna2ToggleSwitch1_CheckedChanged_1(object sender, EventArgs e)
         {
+            if (wireframeTS.Checked)
+                mem.WriteMemory("Skate.crack.exe+08331A58,17C", "int", on);
+            else
+                mem.WriteMemory("Skate.crack.exe+08331A58,17C", "int", off);
+        }
 
+        private void guna2ToggleSwitch2_CheckedChanged_2(object sender, EventArgs e)
+        {
+            if (drawPlayersTS.Checked)
+                mem.WriteMemory("Skate.crack.exe+5600D70", "byte", off);
+            else
+                mem.WriteMemory("Skate.crack.exe+5600D70", "byte", on);
+        }
+
+        private void sunRotationTS_CheckedChanged(object sender, EventArgs e)
+        {
+            if (sunRotationTS.Checked)
+            {
+                sunRotationTB.Enabled = true;
+                sunRotationUD.Enabled = true;
+            }
+            else
+            {
+                sunRotationTB.Enabled = false;
+                sunRotationUD.Enabled = false;
+            }
+        }
+
+        private void sunRotationUD_ValueChanged(object sender, EventArgs e)
+        {
+            sunRotationTB.Value = Convert.ToInt32(sunRotationUD.Value);
+                mem.WriteMemory("Skate.crack.exe+0565DF80,A0,28,24", "float", sunRotationUD.Value.ToString()); //X
+                mem.WriteMemory("Skate.crack.exe+0565DF80,A0,28,28", "float", sunRotationUD.Value.ToString()); //Y
+        }
+
+        private void sunRotationTB_Scroll(object sender, ScrollEventArgs e)
+        {
+            sunRotationUD.Value = sunRotationTB.Value;
+        }
+
+        private void fovSlider_Scroll(object sender, ScrollEventArgs e)
+        {
+            fovUD.Value = Convert.ToInt32(fovTB.Value);
+        }
+
+        void enableAll()
+        {
+            fovTS.Enabled = true;
+            rainbowHueTS.Enabled = true;
+            sunRotationTS.Enabled = true;
+            speedHackTS.Enabled = true;
+            consoleTS.Enabled = true;
+            lockInAirTS.Enabled = true;
+            wireframeTS.Enabled = true;
+            disableRagdollTS.Enabled = true;
+            disableWipeoutsTS.Enabled = true;
+            drawPlayersTS.Enabled = true;
+        }
+
+        void disableAll()
+        {
+            fovTS.Enabled = false;
+            rainbowHueTS.Enabled = false;
+            sunRotationTS.Enabled = false;
+            speedHackTS.Enabled = false;
+            consoleTS.Enabled = false;
+            lockInAirTS.Enabled = false;
+            wireframeTS.Enabled = false;
+            disableRagdollTS.Enabled = false;
+            disableWipeoutsTS.Enabled = false;
+            drawPlayersTS.Enabled = false;
+            fovUD.Enabled = false;
+            sunRotationUD.Enabled = false;
+            rainbowHueUD.Enabled = false;
         }
     }
 }
