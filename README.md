@@ -8,5 +8,11 @@
   <p align="center">
     Skate.crack.exe utility tool made by kikkin_yo_azzez#4943
   </p>
-<img src="images/screenshot.PNG" alt="Screenshot">
+  v1.0
+  <br>
+<img src="images/screenshot.PNG" alt="v1.0">
+  <br>
+  v2.0
+  <br>
+<img src="images/image.png" alt="v2.0">
 </div>
