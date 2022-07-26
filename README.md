@@ -9,7 +9,7 @@
     Skate.crack.exe utility tool made by kikkin_yo_azzez#4943
   </p>
   v1.0
-<img src="images/screenshot.PNG" alt="Screenshot">
+<img src="images/screenshot.PNG" alt="v1.0">
   v2.0
-<img src="images/iamge.png" alt="Screenshot">
+<img src="images/image.png" alt="v2.0">
 </div>
