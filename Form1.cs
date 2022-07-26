@@ -279,5 +279,10 @@ namespace skater
             sunRotationUD.Enabled = false;
             rainbowHueUD.Enabled = false;
         }
+
+        private void guna2NumericUpDown1_ValueChanged_2(object sender, EventArgs e)
+        {
+
+        }
     }
 }
