@@ -72,6 +72,7 @@ namespace skater
             // 
             // boardSpeedTimer
             // 
+            this.boardSpeedTimer.Interval = 25;
             this.boardSpeedTimer.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // madeByLabel
@@ -199,7 +200,7 @@ namespace skater
             this.disableRagdollTS.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(113)))), ((int)(((byte)(255)))));
             this.disableRagdollTS.CheckedState.InnerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.disableRagdollTS.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.disableRagdollTS.Location = new System.Drawing.Point(381, 90);
+            this.disableRagdollTS.Location = new System.Drawing.Point(381, 93);
             this.disableRagdollTS.Name = "disableRagdollTS";
             this.disableRagdollTS.Size = new System.Drawing.Size(35, 20);
             this.disableRagdollTS.TabIndex = 15;
@@ -214,7 +215,7 @@ namespace skater
             this.disableRogdollLabel.BackColor = System.Drawing.Color.Transparent;
             this.disableRogdollLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.disableRogdollLabel.ForeColor = System.Drawing.Color.White;
-            this.disableRogdollLabel.Location = new System.Drawing.Point(424, 90);
+            this.disableRogdollLabel.Location = new System.Drawing.Point(424, 93);
             this.disableRogdollLabel.Name = "disableRogdollLabel";
             this.disableRogdollLabel.Size = new System.Drawing.Size(106, 20);
             this.disableRogdollLabel.TabIndex = 54;
