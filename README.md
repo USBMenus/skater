@@ -12,7 +12,7 @@
   <br>
   click on the releases tab and select the version you want to download
   <br>
-  <h1 align="center">update log</h1>
+  <h1 align="center">change log</h1>
   <br>
   v1.0
   <br>
