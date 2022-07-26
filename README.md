@@ -19,4 +19,11 @@
   updated ui and removed some options
   <br>
 <img src="images/image.png" alt="v2.0">
+  <br>
+  v2.1
+  <br>
+  fixed speed hack and removed console option
+  <br>
+<img src="images/image.png" alt="v2.1">
+  <br>
 </div>
