@@ -24,6 +24,6 @@
   <br>
   fixed speed hack and removed console option
   <br>
-<img src="images/image.png" alt="v2.1">
+<img src="images/v2.1.png" alt="v2.1">
   <br>
 </div>
