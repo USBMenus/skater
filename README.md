@@ -8,6 +8,10 @@
   <p align="center">
     Skate.crack.exe utility tool made by kikkin_yo_azzez#4943
   </p>
+  <h1 align="center">how to download</h1>
+  <br>
+  click on the releases tab and select the version you want to download
+  <br>
   <h1 align="center">update log</h1>
   <br>
   v1.0
