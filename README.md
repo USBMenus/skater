@@ -3,12 +3,12 @@
     <img src="skate.launcher.ico" alt="Icon" width="40" height="40">
   </a>
 
-<h3 align="center">skater</h3>
+<h2 align="center">skater</h2>
 
   <p align="center">
     Skate.crack.exe utility tool made by kikkin_yo_azzez#4943
     <br>
-  <h1>warning</h1>
+  <h3>warning</h3>
     do not use this tool in servers as it may result in a ban
   </p>
   <h1 align="center">how to download</h1>
