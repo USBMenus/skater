@@ -3,7 +3,7 @@
     <img src="skate.launcher.ico" alt="Icon" width="40" height="40">
   </a>
 
-<h1 align="center">skater</h1>
+<h2 align="center">skater</h2>
 
   <p align="center">
     Skate.crack.exe utility tool made by kikkin_yo_azzez#4943
