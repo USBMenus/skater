@@ -62,6 +62,8 @@ namespace skater
             this.sunRotationTS = new Guna.UI2.WinForms.Guna2ToggleSwitch();
             this.sunRotationLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.sunRotationTB = new Guna.UI2.WinForms.Guna2TrackBar();
+            this.infJumpTS = new Guna.UI2.WinForms.Guna2ToggleSwitch();
+            this.infJumpLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
             ((System.ComponentModel.ISupportInitialize)(this.rainbowHueUD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fovUD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sunRotationUD)).BeginInit();
@@ -71,7 +73,7 @@ namespace skater
             // 
             this.madeByLabel.AutoSize = true;
             this.madeByLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.madeByLabel.Location = new System.Drawing.Point(5, 158);
+            this.madeByLabel.Location = new System.Drawing.Point(9, 165);
             this.madeByLabel.Name = "madeByLabel";
             this.madeByLabel.Size = new System.Drawing.Size(161, 16);
             this.madeByLabel.TabIndex = 17;
@@ -165,7 +167,7 @@ namespace skater
             this.lockInAirTS.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(113)))), ((int)(((byte)(255)))));
             this.lockInAirTS.CheckedState.InnerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.lockInAirTS.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.lockInAirTS.Location = new System.Drawing.Point(12, 116);
+            this.lockInAirTS.Location = new System.Drawing.Point(12, 142);
             this.lockInAirTS.Name = "lockInAirTS";
             this.lockInAirTS.Size = new System.Drawing.Size(35, 20);
             this.lockInAirTS.TabIndex = 12;
@@ -180,7 +182,7 @@ namespace skater
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.White;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(55, 116);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(55, 142);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(72, 20);
             this.guna2HtmlLabel1.TabIndex = 52;
@@ -250,7 +252,7 @@ namespace skater
             // 
             this.statusLabel.BackColor = System.Drawing.Color.Transparent;
             this.statusLabel.ForeColor = System.Drawing.Color.White;
-            this.statusLabel.Location = new System.Drawing.Point(418, 143);
+            this.statusLabel.Location = new System.Drawing.Point(422, 150);
             this.statusLabel.Name = "statusLabel";
             this.statusLabel.Size = new System.Drawing.Size(36, 15);
             this.statusLabel.TabIndex = 58;
@@ -299,7 +301,7 @@ namespace skater
             // 
             this.statusInfoLabel.BackColor = System.Drawing.Color.Transparent;
             this.statusInfoLabel.ForeColor = System.Drawing.Color.White;
-            this.statusInfoLabel.Location = new System.Drawing.Point(455, 143);
+            this.statusInfoLabel.Location = new System.Drawing.Point(459, 150);
             this.statusInfoLabel.Name = "statusInfoLabel";
             this.statusInfoLabel.Size = new System.Drawing.Size(66, 15);
             this.statusInfoLabel.TabIndex = 60;
@@ -312,7 +314,7 @@ namespace skater
             | System.Windows.Forms.AnchorStyles.Right)));
             this.attachErrLabel.BackColor = System.Drawing.Color.Transparent;
             this.attachErrLabel.ForeColor = System.Drawing.Color.White;
-            this.attachErrLabel.Location = new System.Drawing.Point(415, 159);
+            this.attachErrLabel.Location = new System.Drawing.Point(419, 166);
             this.attachErrLabel.Name = "attachErrLabel";
             this.attachErrLabel.Size = new System.Drawing.Size(113, 15);
             this.attachErrLabel.TabIndex = 61;
@@ -322,7 +324,7 @@ namespace skater
             // 
             this.opacityLabel.BackColor = System.Drawing.Color.Transparent;
             this.opacityLabel.ForeColor = System.Drawing.Color.White;
-            this.opacityLabel.Location = new System.Drawing.Point(172, 159);
+            this.opacityLabel.Location = new System.Drawing.Point(176, 166);
             this.opacityLabel.Name = "opacityLabel";
             this.opacityLabel.Size = new System.Drawing.Size(39, 15);
             this.opacityLabel.TabIndex = 62;
@@ -330,7 +332,7 @@ namespace skater
             // 
             // opacityTB
             // 
-            this.opacityTB.Location = new System.Drawing.Point(217, 161);
+            this.opacityTB.Location = new System.Drawing.Point(221, 168);
             this.opacityTB.Minimum = 1;
             this.opacityTB.Name = "opacityTB";
             this.opacityTB.Size = new System.Drawing.Size(151, 13);
@@ -510,12 +512,41 @@ namespace skater
             this.sunRotationTB.Value = 0;
             this.sunRotationTB.Scroll += new System.Windows.Forms.ScrollEventHandler(this.sunRotationTB_Scroll);
             // 
+            // infJumpTS
+            // 
+            this.infJumpTS.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.infJumpTS.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(113)))), ((int)(((byte)(255)))));
+            this.infJumpTS.CheckedState.InnerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.infJumpTS.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.infJumpTS.Location = new System.Drawing.Point(12, 116);
+            this.infJumpTS.Name = "infJumpTS";
+            this.infJumpTS.Size = new System.Drawing.Size(35, 20);
+            this.infJumpTS.TabIndex = 76;
+            this.infJumpTS.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.infJumpTS.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.infJumpTS.UncheckedState.InnerBorderColor = System.Drawing.Color.White;
+            this.infJumpTS.UncheckedState.InnerColor = System.Drawing.Color.White;
+            this.infJumpTS.CheckedChanged += new System.EventHandler(this.infJumpTS_CheckedChanged);
+            // 
+            // infJumpLabel
+            // 
+            this.infJumpLabel.BackColor = System.Drawing.Color.Transparent;
+            this.infJumpLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.infJumpLabel.ForeColor = System.Drawing.Color.White;
+            this.infJumpLabel.Location = new System.Drawing.Point(55, 116);
+            this.infJumpLabel.Name = "infJumpLabel";
+            this.infJumpLabel.Size = new System.Drawing.Size(85, 20);
+            this.infJumpLabel.TabIndex = 77;
+            this.infJumpLabel.Text = "Infinite Jump";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.ClientSize = new System.Drawing.Size(540, 186);
+            this.ClientSize = new System.Drawing.Size(540, 188);
+            this.Controls.Add(this.infJumpTS);
+            this.Controls.Add(this.infJumpLabel);
             this.Controls.Add(this.sunRotationUD);
             this.Controls.Add(this.sunRotationTS);
             this.Controls.Add(this.sunRotationLabel);
@@ -595,6 +626,8 @@ namespace skater
         private Guna.UI2.WinForms.Guna2ToggleSwitch sunRotationTS;
         private Guna.UI2.WinForms.Guna2HtmlLabel sunRotationLabel;
         private Guna.UI2.WinForms.Guna2TrackBar sunRotationTB;
+        private Guna.UI2.WinForms.Guna2ToggleSwitch infJumpTS;
+        private Guna.UI2.WinForms.Guna2HtmlLabel infJumpLabel;
     }
 }
 

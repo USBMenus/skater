@@ -237,6 +237,7 @@ namespace skater
             rainbowHueTS.Enabled = true;
             sunRotationTS.Enabled = true;
             speedHackTS.Enabled = true;
+            infJumpTS.Enabled = true;
             lockInAirTS.Enabled = true;
             wireframeTS.Enabled = true;
             disableRagdollTS.Enabled = true;
@@ -250,6 +251,7 @@ namespace skater
             rainbowHueTS.Enabled = false;
             sunRotationTS.Enabled = false;
             speedHackTS.Enabled = false;
+            infJumpTS.Enabled = false;
             lockInAirTS.Enabled = false;
             wireframeTS.Enabled = false;
             disableRagdollTS.Enabled = false;
@@ -260,19 +262,12 @@ namespace skater
             rainbowHueUD.Enabled = false;
         }
 
-        private void guna2NumericUpDown1_ValueChanged_2(object sender, EventArgs e)
+        private void infJumpTS_CheckedChanged(object sender, EventArgs e)
         {
-
-        }
-
-        private void consoleLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void consoleTS_CheckedChanged(object sender, EventArgs e)
-        {
-
+            if (infJumpTS.Checked)
+                mem.FreezeValue("Skate.crack.exe+084E5868,E30,190,3D9", "byte", "0");
+            else
+                mem.UnfreezeValue("Skate.crack.exe+084E5868,E30,190,3D9");
         }
     }
 }
