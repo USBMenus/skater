@@ -8,6 +8,7 @@
   <p align="center">
     Skate.crack.exe utility tool made by kikkin_yo_azzez#4943
     <br>
+  <h1>warning</h1>
     do not use this tool in servers as it may result in a ban
   </p>
   <h1 align="center">how to download</h1>
