@@ -6,7 +6,7 @@
 <h2 align="center">skater</h2>
 
   <p align="center">
-    Skate.crack.exe utility tool made by kikkin_yo_azzez#4943
+    external skate.crack.exe utility tool made by kikkin_yo_azzez#4943
   </p>
   <h3>warning</h3>
     do not use this tool in servers as it may result in a ban
