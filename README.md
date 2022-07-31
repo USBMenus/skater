@@ -34,4 +34,10 @@
   <br>
 <img src="images/v2.1.png" alt="v2.1">
   <br>
+  v2.2
+  <br>
+  added infinite jump
+  <br>
+<img src="images/v2.2.PNG" alt="v2.2">
+  <br>
 </div>
