@@ -16,17 +16,11 @@
   <br>
   <h1 align="center">change log</h1>
   <br>
-  v1.0
+  v2.2
   <br>
-  initial release
+  added infinite jump
   <br>
-<img src="images/screenshot.PNG" alt="v1.0">
-  <br>
-  v2.0
-  <br>
-  updated ui and removed and added some options
-  <br>
-<img src="images/image.png" alt="v2.0">
+<img src="images/v2.2.PNG" alt="v2.2">
   <br>
   v2.1
   <br>
@@ -34,10 +28,16 @@
   <br>
 <img src="images/v2.1.png" alt="v2.1">
   <br>
-  v2.2
+  v2.0
   <br>
-  added infinite jump
+  updated ui and removed and added some options
   <br>
-<img src="images/v2.2.PNG" alt="v2.2">
+<img src="images/image.png" alt="v2.0">
+  <br>
+  v1.0
+  <br>
+  initial release
+  <br>
+<img src="images/screenshot.PNG" alt="v1.0">
   <br>
 </div>
