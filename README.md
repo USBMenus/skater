@@ -12,7 +12,7 @@
     do not use this tool in servers as it may result in a ban
   <h1 align="center">how to download</h1>
   <br>
-  click on the releases tab and select the version you want to download
+  click on the <a href="https://github.com/USBMenus/skater/releases">releases</a> tab and select the version you want to download
   <br>
   <h1 align="center">change log</h1>
   <br>
