@@ -8,9 +8,9 @@
   <p align="center">
     external skate.crack.exe utility tool made by kikkin_yo_azzez#4943
   </p>
-  <h3>warning</h3>
+  <h1>warning</h1>
     do not use this tool in servers as it may result in a ban
-  <h1 align="center">how to download</h1>
+  <h3 align="center">how to download</h3>
   <br>
   click on the <a href="https://github.com/USBMenus/skater/releases">releases</a> tab and select the version you want to download
   <br>
