@@ -8,7 +8,7 @@
   <p align="center">
     external skate.crack.exe utility tool made by kikkin_yo_azzez#4943
   </p>
-  <h2>warning</h2>
+  <h1>warning</h1>
   do not use this tool in servers as it may result in a ban
   <h3 align="center">how to download</h3>
   <br>
