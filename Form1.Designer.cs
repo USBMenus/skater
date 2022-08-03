@@ -64,16 +64,22 @@ namespace skater
             this.sunRotationTB = new Guna.UI2.WinForms.Guna2TrackBar();
             this.infJumpTS = new Guna.UI2.WinForms.Guna2ToggleSwitch();
             this.infJumpLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.mainTabControl = new Guna.UI2.WinForms.Guna2TabControl();
+            this.playerTabPage = new System.Windows.Forms.TabPage();
+            this.visualTabPage = new System.Windows.Forms.TabPage();
             ((System.ComponentModel.ISupportInitialize)(this.rainbowHueUD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fovUD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sunRotationUD)).BeginInit();
+            this.mainTabControl.SuspendLayout();
+            this.playerTabPage.SuspendLayout();
+            this.visualTabPage.SuspendLayout();
             this.SuspendLayout();
             // 
             // madeByLabel
             // 
             this.madeByLabel.AutoSize = true;
             this.madeByLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.madeByLabel.Location = new System.Drawing.Point(9, 165);
+            this.madeByLabel.Location = new System.Drawing.Point(13, 202);
             this.madeByLabel.Name = "madeByLabel";
             this.madeByLabel.Size = new System.Drawing.Size(161, 16);
             this.madeByLabel.TabIndex = 17;
@@ -82,7 +88,7 @@ namespace skater
             // fovTB
             // 
             this.fovTB.Enabled = false;
-            this.fovTB.Location = new System.Drawing.Point(255, 12);
+            this.fovTB.Location = new System.Drawing.Point(249, 6);
             this.fovTB.Maximum = 180;
             this.fovTB.Minimum = -1;
             this.fovTB.Name = "fovTB";
@@ -97,7 +103,7 @@ namespace skater
             this.fovLabel.BackColor = System.Drawing.Color.Transparent;
             this.fovLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fovLabel.ForeColor = System.Drawing.Color.White;
-            this.fovLabel.Location = new System.Drawing.Point(55, 12);
+            this.fovLabel.Location = new System.Drawing.Point(49, 6);
             this.fovLabel.Name = "fovLabel";
             this.fovLabel.Size = new System.Drawing.Size(33, 20);
             this.fovLabel.TabIndex = 39;
@@ -109,7 +115,7 @@ namespace skater
             this.fovTS.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(113)))), ((int)(((byte)(255)))));
             this.fovTS.CheckedState.InnerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.fovTS.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.fovTS.Location = new System.Drawing.Point(12, 12);
+            this.fovTS.Location = new System.Drawing.Point(6, 6);
             this.fovTS.Name = "fovTS";
             this.fovTS.Size = new System.Drawing.Size(35, 20);
             this.fovTS.TabIndex = 0;
@@ -125,7 +131,7 @@ namespace skater
             this.rainbowHueTS.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(113)))), ((int)(((byte)(255)))));
             this.rainbowHueTS.CheckedState.InnerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.rainbowHueTS.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.rainbowHueTS.Location = new System.Drawing.Point(12, 38);
+            this.rainbowHueTS.Location = new System.Drawing.Point(6, 32);
             this.rainbowHueTS.Name = "rainbowHueTS";
             this.rainbowHueTS.Size = new System.Drawing.Size(35, 20);
             this.rainbowHueTS.TabIndex = 4;
@@ -140,7 +146,7 @@ namespace skater
             this.rainbowHueLabel.BackColor = System.Drawing.Color.Transparent;
             this.rainbowHueLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rainbowHueLabel.ForeColor = System.Drawing.Color.White;
-            this.rainbowHueLabel.Location = new System.Drawing.Point(55, 38);
+            this.rainbowHueLabel.Location = new System.Drawing.Point(49, 32);
             this.rainbowHueLabel.Name = "rainbowHueLabel";
             this.rainbowHueLabel.Size = new System.Drawing.Size(92, 20);
             this.rainbowHueLabel.TabIndex = 49;
@@ -150,7 +156,7 @@ namespace skater
             // 
             this.rainbowHueTB.Enabled = false;
             this.rainbowHueTB.LargeChange = 1;
-            this.rainbowHueTB.Location = new System.Drawing.Point(255, 38);
+            this.rainbowHueTB.Location = new System.Drawing.Point(249, 32);
             this.rainbowHueTB.Maximum = 359;
             this.rainbowHueTB.Minimum = 1;
             this.rainbowHueTB.MouseWheelBarPartitions = 359;
@@ -167,7 +173,7 @@ namespace skater
             this.lockInAirTS.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(113)))), ((int)(((byte)(255)))));
             this.lockInAirTS.CheckedState.InnerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.lockInAirTS.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.lockInAirTS.Location = new System.Drawing.Point(12, 142);
+            this.lockInAirTS.Location = new System.Drawing.Point(6, 58);
             this.lockInAirTS.Name = "lockInAirTS";
             this.lockInAirTS.Size = new System.Drawing.Size(35, 20);
             this.lockInAirTS.TabIndex = 12;
@@ -182,7 +188,7 @@ namespace skater
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.White;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(55, 142);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(49, 58);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(72, 20);
             this.guna2HtmlLabel1.TabIndex = 52;
@@ -194,7 +200,7 @@ namespace skater
             this.disableRagdollTS.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(113)))), ((int)(((byte)(255)))));
             this.disableRagdollTS.CheckedState.InnerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.disableRagdollTS.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.disableRagdollTS.Location = new System.Drawing.Point(381, 90);
+            this.disableRagdollTS.Location = new System.Drawing.Point(6, 110);
             this.disableRagdollTS.Name = "disableRagdollTS";
             this.disableRagdollTS.Size = new System.Drawing.Size(35, 20);
             this.disableRagdollTS.TabIndex = 15;
@@ -209,7 +215,7 @@ namespace skater
             this.disableRogdollLabel.BackColor = System.Drawing.Color.Transparent;
             this.disableRogdollLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.disableRogdollLabel.ForeColor = System.Drawing.Color.White;
-            this.disableRogdollLabel.Location = new System.Drawing.Point(424, 90);
+            this.disableRogdollLabel.Location = new System.Drawing.Point(49, 110);
             this.disableRogdollLabel.Name = "disableRogdollLabel";
             this.disableRogdollLabel.Size = new System.Drawing.Size(106, 20);
             this.disableRogdollLabel.TabIndex = 54;
@@ -226,7 +232,7 @@ namespace skater
             this.rainbowHueUD.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.rainbowHueUD.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.rainbowHueUD.ForeColor = System.Drawing.Color.White;
-            this.rainbowHueUD.Location = new System.Drawing.Point(188, 38);
+            this.rainbowHueUD.Location = new System.Drawing.Point(182, 32);
             this.rainbowHueUD.Maximum = new decimal(new int[] {
             359,
             0,
@@ -252,7 +258,7 @@ namespace skater
             // 
             this.statusLabel.BackColor = System.Drawing.Color.Transparent;
             this.statusLabel.ForeColor = System.Drawing.Color.White;
-            this.statusLabel.Location = new System.Drawing.Point(422, 150);
+            this.statusLabel.Location = new System.Drawing.Point(426, 187);
             this.statusLabel.Name = "statusLabel";
             this.statusLabel.Size = new System.Drawing.Size(36, 15);
             this.statusLabel.TabIndex = 58;
@@ -269,7 +275,7 @@ namespace skater
             this.fovUD.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.fovUD.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.fovUD.ForeColor = System.Drawing.Color.White;
-            this.fovUD.Location = new System.Drawing.Point(188, 12);
+            this.fovUD.Location = new System.Drawing.Point(182, 6);
             this.fovUD.Maximum = new decimal(new int[] {
             180,
             0,
@@ -301,7 +307,7 @@ namespace skater
             // 
             this.statusInfoLabel.BackColor = System.Drawing.Color.Transparent;
             this.statusInfoLabel.ForeColor = System.Drawing.Color.White;
-            this.statusInfoLabel.Location = new System.Drawing.Point(459, 150);
+            this.statusInfoLabel.Location = new System.Drawing.Point(463, 187);
             this.statusInfoLabel.Name = "statusInfoLabel";
             this.statusInfoLabel.Size = new System.Drawing.Size(66, 15);
             this.statusInfoLabel.TabIndex = 60;
@@ -314,7 +320,7 @@ namespace skater
             | System.Windows.Forms.AnchorStyles.Right)));
             this.attachErrLabel.BackColor = System.Drawing.Color.Transparent;
             this.attachErrLabel.ForeColor = System.Drawing.Color.White;
-            this.attachErrLabel.Location = new System.Drawing.Point(419, 166);
+            this.attachErrLabel.Location = new System.Drawing.Point(423, 203);
             this.attachErrLabel.Name = "attachErrLabel";
             this.attachErrLabel.Size = new System.Drawing.Size(113, 15);
             this.attachErrLabel.TabIndex = 61;
@@ -324,7 +330,7 @@ namespace skater
             // 
             this.opacityLabel.BackColor = System.Drawing.Color.Transparent;
             this.opacityLabel.ForeColor = System.Drawing.Color.White;
-            this.opacityLabel.Location = new System.Drawing.Point(176, 166);
+            this.opacityLabel.Location = new System.Drawing.Point(180, 203);
             this.opacityLabel.Name = "opacityLabel";
             this.opacityLabel.Size = new System.Drawing.Size(39, 15);
             this.opacityLabel.TabIndex = 62;
@@ -332,7 +338,7 @@ namespace skater
             // 
             // opacityTB
             // 
-            this.opacityTB.Location = new System.Drawing.Point(221, 168);
+            this.opacityTB.Location = new System.Drawing.Point(225, 205);
             this.opacityTB.Minimum = 1;
             this.opacityTB.Name = "opacityTB";
             this.opacityTB.Size = new System.Drawing.Size(151, 13);
@@ -348,7 +354,7 @@ namespace skater
             this.disableWipeoutsTS.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(113)))), ((int)(((byte)(255)))));
             this.disableWipeoutsTS.CheckedState.InnerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.disableWipeoutsTS.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.disableWipeoutsTS.Location = new System.Drawing.Point(188, 116);
+            this.disableWipeoutsTS.Location = new System.Drawing.Point(6, 84);
             this.disableWipeoutsTS.Name = "disableWipeoutsTS";
             this.disableWipeoutsTS.Size = new System.Drawing.Size(35, 20);
             this.disableWipeoutsTS.TabIndex = 16;
@@ -363,7 +369,7 @@ namespace skater
             this.disableWipeoutsLabel.BackColor = System.Drawing.Color.Transparent;
             this.disableWipeoutsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.disableWipeoutsLabel.ForeColor = System.Drawing.Color.White;
-            this.disableWipeoutsLabel.Location = new System.Drawing.Point(231, 116);
+            this.disableWipeoutsLabel.Location = new System.Drawing.Point(49, 84);
             this.disableWipeoutsLabel.Name = "disableWipeoutsLabel";
             this.disableWipeoutsLabel.Size = new System.Drawing.Size(119, 20);
             this.disableWipeoutsLabel.TabIndex = 64;
@@ -375,7 +381,7 @@ namespace skater
             this.speedHackTS.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(113)))), ((int)(((byte)(255)))));
             this.speedHackTS.CheckedState.InnerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.speedHackTS.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.speedHackTS.Location = new System.Drawing.Point(12, 90);
+            this.speedHackTS.Location = new System.Drawing.Point(6, 6);
             this.speedHackTS.Name = "speedHackTS";
             this.speedHackTS.Size = new System.Drawing.Size(35, 20);
             this.speedHackTS.TabIndex = 10;
@@ -390,7 +396,7 @@ namespace skater
             this.speedHackLabel.BackColor = System.Drawing.Color.Transparent;
             this.speedHackLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.speedHackLabel.ForeColor = System.Drawing.Color.White;
-            this.speedHackLabel.Location = new System.Drawing.Point(55, 90);
+            this.speedHackLabel.Location = new System.Drawing.Point(49, 6);
             this.speedHackLabel.Name = "speedHackLabel";
             this.speedHackLabel.Size = new System.Drawing.Size(84, 20);
             this.speedHackLabel.TabIndex = 66;
@@ -402,7 +408,7 @@ namespace skater
             this.wireframeTS.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(113)))), ((int)(((byte)(255)))));
             this.wireframeTS.CheckedState.InnerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.wireframeTS.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.wireframeTS.Location = new System.Drawing.Point(381, 116);
+            this.wireframeTS.Location = new System.Drawing.Point(6, 84);
             this.wireframeTS.Name = "wireframeTS";
             this.wireframeTS.Size = new System.Drawing.Size(35, 20);
             this.wireframeTS.TabIndex = 13;
@@ -417,7 +423,7 @@ namespace skater
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.White;
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(424, 116);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(49, 84);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             this.guna2HtmlLabel3.Size = new System.Drawing.Size(114, 20);
             this.guna2HtmlLabel3.TabIndex = 68;
@@ -429,7 +435,7 @@ namespace skater
             this.drawPlayersTS.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(113)))), ((int)(((byte)(255)))));
             this.drawPlayersTS.CheckedState.InnerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.drawPlayersTS.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.drawPlayersTS.Location = new System.Drawing.Point(188, 90);
+            this.drawPlayersTS.Location = new System.Drawing.Point(6, 110);
             this.drawPlayersTS.Name = "drawPlayersTS";
             this.drawPlayersTS.Size = new System.Drawing.Size(35, 20);
             this.drawPlayersTS.TabIndex = 14;
@@ -444,7 +450,7 @@ namespace skater
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.White;
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(231, 90);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(49, 110);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(144, 20);
             this.guna2HtmlLabel2.TabIndex = 72;
@@ -461,7 +467,7 @@ namespace skater
             this.sunRotationUD.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.sunRotationUD.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.sunRotationUD.ForeColor = System.Drawing.Color.White;
-            this.sunRotationUD.Location = new System.Drawing.Point(188, 64);
+            this.sunRotationUD.Location = new System.Drawing.Point(182, 58);
             this.sunRotationUD.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -479,7 +485,7 @@ namespace skater
             this.sunRotationTS.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(113)))), ((int)(((byte)(255)))));
             this.sunRotationTS.CheckedState.InnerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.sunRotationTS.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.sunRotationTS.Location = new System.Drawing.Point(12, 64);
+            this.sunRotationTS.Location = new System.Drawing.Point(6, 58);
             this.sunRotationTS.Name = "sunRotationTS";
             this.sunRotationTS.Size = new System.Drawing.Size(35, 20);
             this.sunRotationTS.TabIndex = 7;
@@ -494,7 +500,7 @@ namespace skater
             this.sunRotationLabel.BackColor = System.Drawing.Color.Transparent;
             this.sunRotationLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sunRotationLabel.ForeColor = System.Drawing.Color.White;
-            this.sunRotationLabel.Location = new System.Drawing.Point(55, 64);
+            this.sunRotationLabel.Location = new System.Drawing.Point(49, 58);
             this.sunRotationLabel.Name = "sunRotationLabel";
             this.sunRotationLabel.Size = new System.Drawing.Size(89, 20);
             this.sunRotationLabel.TabIndex = 75;
@@ -503,7 +509,7 @@ namespace skater
             // sunRotationTB
             // 
             this.sunRotationTB.Enabled = false;
-            this.sunRotationTB.Location = new System.Drawing.Point(255, 64);
+            this.sunRotationTB.Location = new System.Drawing.Point(249, 58);
             this.sunRotationTB.Maximum = 10000;
             this.sunRotationTB.Name = "sunRotationTB";
             this.sunRotationTB.Size = new System.Drawing.Size(273, 23);
@@ -518,7 +524,7 @@ namespace skater
             this.infJumpTS.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(113)))), ((int)(((byte)(255)))));
             this.infJumpTS.CheckedState.InnerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.infJumpTS.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.infJumpTS.Location = new System.Drawing.Point(12, 116);
+            this.infJumpTS.Location = new System.Drawing.Point(6, 32);
             this.infJumpTS.Name = "infJumpTS";
             this.infJumpTS.Size = new System.Drawing.Size(35, 20);
             this.infJumpTS.TabIndex = 76;
@@ -533,50 +539,102 @@ namespace skater
             this.infJumpLabel.BackColor = System.Drawing.Color.Transparent;
             this.infJumpLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.infJumpLabel.ForeColor = System.Drawing.Color.White;
-            this.infJumpLabel.Location = new System.Drawing.Point(55, 116);
+            this.infJumpLabel.Location = new System.Drawing.Point(49, 32);
             this.infJumpLabel.Name = "infJumpLabel";
             this.infJumpLabel.Size = new System.Drawing.Size(85, 20);
             this.infJumpLabel.TabIndex = 77;
             this.infJumpLabel.Text = "Infinite Jump";
+            // 
+            // mainTabControl
+            // 
+            this.mainTabControl.Controls.Add(this.playerTabPage);
+            this.mainTabControl.Controls.Add(this.visualTabPage);
+            this.mainTabControl.ItemSize = new System.Drawing.Size(270, 40);
+            this.mainTabControl.Location = new System.Drawing.Point(12, 12);
+            this.mainTabControl.Name = "mainTabControl";
+            this.mainTabControl.SelectedIndex = 0;
+            this.mainTabControl.Size = new System.Drawing.Size(548, 187);
+            this.mainTabControl.TabButtonHoverState.BorderColor = System.Drawing.Color.Empty;
+            this.mainTabControl.TabButtonHoverState.FillColor = System.Drawing.Color.Empty;
+            this.mainTabControl.TabButtonHoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
+            this.mainTabControl.TabButtonHoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(113)))), ((int)(((byte)(255)))));
+            this.mainTabControl.TabButtonHoverState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(113)))), ((int)(((byte)(255)))));
+            this.mainTabControl.TabButtonIdleState.BorderColor = System.Drawing.Color.Empty;
+            this.mainTabControl.TabButtonIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.mainTabControl.TabButtonIdleState.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
+            this.mainTabControl.TabButtonIdleState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(113)))), ((int)(((byte)(255)))));
+            this.mainTabControl.TabButtonIdleState.InnerColor = System.Drawing.Color.Empty;
+            this.mainTabControl.TabButtonSelectedState.BorderColor = System.Drawing.Color.Empty;
+            this.mainTabControl.TabButtonSelectedState.FillColor = System.Drawing.Color.Empty;
+            this.mainTabControl.TabButtonSelectedState.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
+            this.mainTabControl.TabButtonSelectedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(113)))), ((int)(((byte)(255)))));
+            this.mainTabControl.TabButtonSelectedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(113)))), ((int)(((byte)(255)))));
+            this.mainTabControl.TabButtonSize = new System.Drawing.Size(270, 40);
+            this.mainTabControl.TabIndex = 78;
+            this.mainTabControl.TabMenuBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.mainTabControl.TabMenuOrientation = Guna.UI2.WinForms.TabMenuOrientation.HorizontalTop;
+            // 
+            // playerTabPage
+            // 
+            this.playerTabPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.playerTabPage.Controls.Add(this.speedHackTS);
+            this.playerTabPage.Controls.Add(this.infJumpTS);
+            this.playerTabPage.Controls.Add(this.guna2HtmlLabel1);
+            this.playerTabPage.Controls.Add(this.infJumpLabel);
+            this.playerTabPage.Controls.Add(this.lockInAirTS);
+            this.playerTabPage.Controls.Add(this.disableRogdollLabel);
+            this.playerTabPage.Controls.Add(this.disableRagdollTS);
+            this.playerTabPage.Controls.Add(this.disableWipeoutsLabel);
+            this.playerTabPage.Controls.Add(this.disableWipeoutsTS);
+            this.playerTabPage.Controls.Add(this.speedHackLabel);
+            this.playerTabPage.ForeColor = System.Drawing.Color.Transparent;
+            this.playerTabPage.Location = new System.Drawing.Point(4, 44);
+            this.playerTabPage.Name = "playerTabPage";
+            this.playerTabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.playerTabPage.Size = new System.Drawing.Size(540, 139);
+            this.playerTabPage.TabIndex = 0;
+            this.playerTabPage.Text = "Player";
+            // 
+            // visualTabPage
+            // 
+            this.visualTabPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.visualTabPage.Controls.Add(this.fovTS);
+            this.visualTabPage.Controls.Add(this.sunRotationUD);
+            this.visualTabPage.Controls.Add(this.fovTB);
+            this.visualTabPage.Controls.Add(this.sunRotationTS);
+            this.visualTabPage.Controls.Add(this.fovLabel);
+            this.visualTabPage.Controls.Add(this.sunRotationLabel);
+            this.visualTabPage.Controls.Add(this.rainbowHueTB);
+            this.visualTabPage.Controls.Add(this.sunRotationTB);
+            this.visualTabPage.Controls.Add(this.rainbowHueLabel);
+            this.visualTabPage.Controls.Add(this.drawPlayersTS);
+            this.visualTabPage.Controls.Add(this.rainbowHueTS);
+            this.visualTabPage.Controls.Add(this.guna2HtmlLabel2);
+            this.visualTabPage.Controls.Add(this.rainbowHueUD);
+            this.visualTabPage.Controls.Add(this.wireframeTS);
+            this.visualTabPage.Controls.Add(this.fovUD);
+            this.visualTabPage.Controls.Add(this.guna2HtmlLabel3);
+            this.visualTabPage.ForeColor = System.Drawing.Color.Transparent;
+            this.visualTabPage.Location = new System.Drawing.Point(4, 44);
+            this.visualTabPage.Name = "visualTabPage";
+            this.visualTabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.visualTabPage.Size = new System.Drawing.Size(540, 139);
+            this.visualTabPage.TabIndex = 1;
+            this.visualTabPage.Text = "Visual";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.ClientSize = new System.Drawing.Size(540, 188);
-            this.Controls.Add(this.infJumpTS);
-            this.Controls.Add(this.infJumpLabel);
-            this.Controls.Add(this.sunRotationUD);
-            this.Controls.Add(this.sunRotationTS);
-            this.Controls.Add(this.sunRotationLabel);
-            this.Controls.Add(this.sunRotationTB);
-            this.Controls.Add(this.drawPlayersTS);
-            this.Controls.Add(this.guna2HtmlLabel2);
-            this.Controls.Add(this.wireframeTS);
-            this.Controls.Add(this.guna2HtmlLabel3);
-            this.Controls.Add(this.speedHackTS);
-            this.Controls.Add(this.speedHackLabel);
-            this.Controls.Add(this.disableWipeoutsTS);
-            this.Controls.Add(this.disableWipeoutsLabel);
+            this.ClientSize = new System.Drawing.Size(573, 225);
             this.Controls.Add(this.opacityTB);
             this.Controls.Add(this.opacityLabel);
             this.Controls.Add(this.attachErrLabel);
             this.Controls.Add(this.statusInfoLabel);
-            this.Controls.Add(this.fovUD);
             this.Controls.Add(this.statusLabel);
-            this.Controls.Add(this.rainbowHueUD);
-            this.Controls.Add(this.disableRagdollTS);
-            this.Controls.Add(this.disableRogdollLabel);
-            this.Controls.Add(this.lockInAirTS);
-            this.Controls.Add(this.guna2HtmlLabel1);
-            this.Controls.Add(this.rainbowHueTS);
-            this.Controls.Add(this.rainbowHueLabel);
-            this.Controls.Add(this.rainbowHueTB);
-            this.Controls.Add(this.fovTS);
-            this.Controls.Add(this.fovLabel);
-            this.Controls.Add(this.fovTB);
             this.Controls.Add(this.madeByLabel);
+            this.Controls.Add(this.mainTabControl);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -589,6 +647,11 @@ namespace skater
             ((System.ComponentModel.ISupportInitialize)(this.rainbowHueUD)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fovUD)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sunRotationUD)).EndInit();
+            this.mainTabControl.ResumeLayout(false);
+            this.playerTabPage.ResumeLayout(false);
+            this.playerTabPage.PerformLayout();
+            this.visualTabPage.ResumeLayout(false);
+            this.visualTabPage.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -628,6 +691,9 @@ namespace skater
         private Guna.UI2.WinForms.Guna2TrackBar sunRotationTB;
         private Guna.UI2.WinForms.Guna2ToggleSwitch infJumpTS;
         private Guna.UI2.WinForms.Guna2HtmlLabel infJumpLabel;
+        private Guna.UI2.WinForms.Guna2TabControl mainTabControl;
+        private System.Windows.Forms.TabPage playerTabPage;
+        private System.Windows.Forms.TabPage visualTabPage;
     }
 }
 
