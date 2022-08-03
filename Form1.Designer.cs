@@ -67,12 +67,24 @@ namespace skater
             this.mainTabControl = new Guna.UI2.WinForms.Guna2TabControl();
             this.playerTabPage = new System.Windows.Forms.TabPage();
             this.visualTabPage = new System.Windows.Forms.TabPage();
+            this.miscTabPage = new System.Windows.Forms.TabPage();
+            this.truckTightnessTS = new Guna.UI2.WinForms.Guna2ToggleSwitch();
+            this.truckTightnessTB = new Guna.UI2.WinForms.Guna2TrackBar();
+            this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.wheelHardessTB = new Guna.UI2.WinForms.Guna2TrackBar();
+            this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.wheelHardnessTS = new Guna.UI2.WinForms.Guna2ToggleSwitch();
+            this.wheelHardnessUD = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.truckTightnessUD = new Guna.UI2.WinForms.Guna2NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.rainbowHueUD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fovUD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sunRotationUD)).BeginInit();
             this.mainTabControl.SuspendLayout();
             this.playerTabPage.SuspendLayout();
             this.visualTabPage.SuspendLayout();
+            this.miscTabPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.wheelHardnessUD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.truckTightnessUD)).BeginInit();
             this.SuspendLayout();
             // 
             // madeByLabel
@@ -549,7 +561,8 @@ namespace skater
             // 
             this.mainTabControl.Controls.Add(this.playerTabPage);
             this.mainTabControl.Controls.Add(this.visualTabPage);
-            this.mainTabControl.ItemSize = new System.Drawing.Size(270, 40);
+            this.mainTabControl.Controls.Add(this.miscTabPage);
+            this.mainTabControl.ItemSize = new System.Drawing.Size(180, 40);
             this.mainTabControl.Location = new System.Drawing.Point(12, 12);
             this.mainTabControl.Name = "mainTabControl";
             this.mainTabControl.SelectedIndex = 0;
@@ -569,7 +582,7 @@ namespace skater
             this.mainTabControl.TabButtonSelectedState.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
             this.mainTabControl.TabButtonSelectedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(113)))), ((int)(((byte)(255)))));
             this.mainTabControl.TabButtonSelectedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(113)))), ((int)(((byte)(255)))));
-            this.mainTabControl.TabButtonSize = new System.Drawing.Size(270, 40);
+            this.mainTabControl.TabButtonSize = new System.Drawing.Size(180, 40);
             this.mainTabControl.TabIndex = 78;
             this.mainTabControl.TabMenuBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.mainTabControl.TabMenuOrientation = Guna.UI2.WinForms.TabMenuOrientation.HorizontalTop;
@@ -622,6 +635,171 @@ namespace skater
             this.visualTabPage.TabIndex = 1;
             this.visualTabPage.Text = "Visual";
             // 
+            // miscTabPage
+            // 
+            this.miscTabPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.miscTabPage.Controls.Add(this.truckTightnessTS);
+            this.miscTabPage.Controls.Add(this.truckTightnessTB);
+            this.miscTabPage.Controls.Add(this.guna2HtmlLabel4);
+            this.miscTabPage.Controls.Add(this.wheelHardessTB);
+            this.miscTabPage.Controls.Add(this.guna2HtmlLabel5);
+            this.miscTabPage.Controls.Add(this.wheelHardnessTS);
+            this.miscTabPage.Controls.Add(this.wheelHardnessUD);
+            this.miscTabPage.Controls.Add(this.truckTightnessUD);
+            this.miscTabPage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.miscTabPage.Location = new System.Drawing.Point(4, 44);
+            this.miscTabPage.Name = "miscTabPage";
+            this.miscTabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.miscTabPage.Size = new System.Drawing.Size(540, 139);
+            this.miscTabPage.TabIndex = 2;
+            this.miscTabPage.Text = "Misc";
+            // 
+            // truckTightnessTS
+            // 
+            this.truckTightnessTS.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.truckTightnessTS.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(113)))), ((int)(((byte)(255)))));
+            this.truckTightnessTS.CheckedState.InnerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.truckTightnessTS.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.truckTightnessTS.Location = new System.Drawing.Point(6, 6);
+            this.truckTightnessTS.Name = "truckTightnessTS";
+            this.truckTightnessTS.Size = new System.Drawing.Size(35, 20);
+            this.truckTightnessTS.TabIndex = 50;
+            this.truckTightnessTS.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.truckTightnessTS.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.truckTightnessTS.UncheckedState.InnerBorderColor = System.Drawing.Color.White;
+            this.truckTightnessTS.UncheckedState.InnerColor = System.Drawing.Color.White;
+            this.truckTightnessTS.CheckedChanged += new System.EventHandler(this.guna2ToggleSwitch1_CheckedChanged_2);
+            // 
+            // truckTightnessTB
+            // 
+            this.truckTightnessTB.Enabled = false;
+            this.truckTightnessTB.Location = new System.Drawing.Point(249, 6);
+            this.truckTightnessTB.Maximum = 4;
+            this.truckTightnessTB.Minimum = -5;
+            this.truckTightnessTB.MouseWheelBarPartitions = 1;
+            this.truckTightnessTB.Name = "truckTightnessTB";
+            this.truckTightnessTB.Size = new System.Drawing.Size(273, 23);
+            this.truckTightnessTB.TabIndex = 52;
+            this.truckTightnessTB.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(113)))), ((int)(((byte)(255)))));
+            this.truckTightnessTB.Value = 0;
+            this.truckTightnessTB.Scroll += new System.Windows.Forms.ScrollEventHandler(this.truckTightnessTB_Scroll);
+            // 
+            // guna2HtmlLabel4
+            // 
+            this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel4.ForeColor = System.Drawing.Color.White;
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(49, 6);
+            this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
+            this.guna2HtmlLabel4.Size = new System.Drawing.Size(109, 20);
+            this.guna2HtmlLabel4.TabIndex = 56;
+            this.guna2HtmlLabel4.Text = "Truck Tightness";
+            // 
+            // wheelHardessTB
+            // 
+            this.wheelHardessTB.Enabled = false;
+            this.wheelHardessTB.LargeChange = 1;
+            this.wheelHardessTB.Location = new System.Drawing.Point(249, 32);
+            this.wheelHardessTB.Maximum = 4;
+            this.wheelHardessTB.Minimum = -10;
+            this.wheelHardessTB.MouseWheelBarPartitions = 1;
+            this.wheelHardessTB.Name = "wheelHardessTB";
+            this.wheelHardessTB.Size = new System.Drawing.Size(273, 23);
+            this.wheelHardessTB.TabIndex = 55;
+            this.wheelHardessTB.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(113)))), ((int)(((byte)(255)))));
+            this.wheelHardessTB.Value = 1;
+            this.wheelHardessTB.Scroll += new System.Windows.Forms.ScrollEventHandler(this.wheelHardessTB_Scroll);
+            // 
+            // guna2HtmlLabel5
+            // 
+            this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel5.ForeColor = System.Drawing.Color.White;
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(49, 32);
+            this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
+            this.guna2HtmlLabel5.Size = new System.Drawing.Size(113, 20);
+            this.guna2HtmlLabel5.TabIndex = 57;
+            this.guna2HtmlLabel5.Text = "Wheel Hardness";
+            // 
+            // wheelHardnessTS
+            // 
+            this.wheelHardnessTS.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.wheelHardnessTS.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(113)))), ((int)(((byte)(255)))));
+            this.wheelHardnessTS.CheckedState.InnerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.wheelHardnessTS.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.wheelHardnessTS.Location = new System.Drawing.Point(6, 32);
+            this.wheelHardnessTS.Name = "wheelHardnessTS";
+            this.wheelHardnessTS.Size = new System.Drawing.Size(35, 20);
+            this.wheelHardnessTS.TabIndex = 53;
+            this.wheelHardnessTS.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.wheelHardnessTS.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.wheelHardnessTS.UncheckedState.InnerBorderColor = System.Drawing.Color.White;
+            this.wheelHardnessTS.UncheckedState.InnerColor = System.Drawing.Color.White;
+            this.wheelHardnessTS.CheckedChanged += new System.EventHandler(this.wheelHardnessTS_CheckedChanged);
+            // 
+            // wheelHardnessUD
+            // 
+            this.wheelHardnessUD.AutoRoundedCorners = true;
+            this.wheelHardnessUD.BackColor = System.Drawing.Color.Transparent;
+            this.wheelHardnessUD.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(113)))), ((int)(((byte)(255)))));
+            this.wheelHardnessUD.BorderRadius = 10;
+            this.wheelHardnessUD.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.wheelHardnessUD.DecimalPlaces = 2;
+            this.wheelHardnessUD.Enabled = false;
+            this.wheelHardnessUD.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.wheelHardnessUD.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.wheelHardnessUD.ForeColor = System.Drawing.Color.White;
+            this.wheelHardnessUD.Location = new System.Drawing.Point(182, 32);
+            this.wheelHardnessUD.Maximum = new decimal(new int[] {
+            4,
+            0,
+            0,
+            0});
+            this.wheelHardnessUD.Minimum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            -2147483648});
+            this.wheelHardnessUD.Name = "wheelHardnessUD";
+            this.wheelHardnessUD.Size = new System.Drawing.Size(61, 23);
+            this.wheelHardnessUD.TabIndex = 54;
+            this.wheelHardnessUD.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(113)))), ((int)(((byte)(255)))));
+            this.wheelHardnessUD.Value = new decimal(new int[] {
+            7,
+            0,
+            0,
+            65536});
+            this.wheelHardnessUD.ValueChanged += new System.EventHandler(this.wheelHardnessUD_ValueChanged);
+            // 
+            // truckTightnessUD
+            // 
+            this.truckTightnessUD.AutoRoundedCorners = true;
+            this.truckTightnessUD.BackColor = System.Drawing.Color.Transparent;
+            this.truckTightnessUD.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(113)))), ((int)(((byte)(255)))));
+            this.truckTightnessUD.BorderRadius = 10;
+            this.truckTightnessUD.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.truckTightnessUD.DecimalPlaces = 2;
+            this.truckTightnessUD.Enabled = false;
+            this.truckTightnessUD.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.truckTightnessUD.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.truckTightnessUD.ForeColor = System.Drawing.Color.White;
+            this.truckTightnessUD.Location = new System.Drawing.Point(182, 6);
+            this.truckTightnessUD.Maximum = new decimal(new int[] {
+            4,
+            0,
+            0,
+            0});
+            this.truckTightnessUD.Minimum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            -2147483648});
+            this.truckTightnessUD.Name = "truckTightnessUD";
+            this.truckTightnessUD.Size = new System.Drawing.Size(61, 23);
+            this.truckTightnessUD.TabIndex = 51;
+            this.truckTightnessUD.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(113)))), ((int)(((byte)(255)))));
+            this.truckTightnessUD.ValueChanged += new System.EventHandler(this.truckTightnessUD_ValueChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -652,6 +830,10 @@ namespace skater
             this.playerTabPage.PerformLayout();
             this.visualTabPage.ResumeLayout(false);
             this.visualTabPage.PerformLayout();
+            this.miscTabPage.ResumeLayout(false);
+            this.miscTabPage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.wheelHardnessUD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.truckTightnessUD)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -694,6 +876,15 @@ namespace skater
         private Guna.UI2.WinForms.Guna2TabControl mainTabControl;
         private System.Windows.Forms.TabPage playerTabPage;
         private System.Windows.Forms.TabPage visualTabPage;
+        private System.Windows.Forms.TabPage miscTabPage;
+        private Guna.UI2.WinForms.Guna2ToggleSwitch truckTightnessTS;
+        private Guna.UI2.WinForms.Guna2TrackBar truckTightnessTB;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
+        private Guna.UI2.WinForms.Guna2TrackBar wheelHardessTB;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
+        private Guna.UI2.WinForms.Guna2ToggleSwitch wheelHardnessTS;
+        private Guna.UI2.WinForms.Guna2NumericUpDown wheelHardnessUD;
+        private Guna.UI2.WinForms.Guna2NumericUpDown truckTightnessUD;
     }
 }
 

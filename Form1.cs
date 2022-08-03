@@ -243,6 +243,8 @@ namespace skater
             disableRagdollTS.Enabled = true;
             disableWipeoutsTS.Enabled = true;
             drawPlayersTS.Enabled = true;
+            truckTightnessTS.Enabled = true;
+            wheelHardnessTS.Enabled = true;
         }
 
         void disableAll()
@@ -260,6 +262,12 @@ namespace skater
             fovUD.Enabled = false;
             sunRotationUD.Enabled = false;
             rainbowHueUD.Enabled = false;
+            truckTightnessTS.Enabled = false;
+            truckTightnessUD.Enabled = false;
+            truckTightnessTB.Enabled = false;
+            wheelHardnessTS.Enabled = false;
+            wheelHardnessUD.Enabled = false;
+            wheelHardessTB.Enabled = false;
         }
 
         private void infJumpTS_CheckedChanged(object sender, EventArgs e)
@@ -268,6 +276,54 @@ namespace skater
                 mem.FreezeValue("Skate.crack.exe+084E5868,E30,190,3D9", "byte", "0");
             else
                 mem.UnfreezeValue("Skate.crack.exe+084E5868,E30,190,3D9");
+        }
+
+        private void guna2ToggleSwitch1_CheckedChanged_2(object sender, EventArgs e)
+        {
+            if (truckTightnessTS.Checked)
+            {
+                truckTightnessTB.Enabled = true;
+                truckTightnessUD.Enabled = true;
+            }
+            else
+            {
+                truckTightnessTB.Enabled = false;
+                truckTightnessUD.Enabled = false;
+            }
+        }
+
+        private void truckTightnessTB_Scroll(object sender, ScrollEventArgs e)
+        {
+            truckTightnessUD.Value = truckTightnessTB.Value;
+        }
+
+        private void wheelHardessTB_Scroll(object sender, ScrollEventArgs e)
+        {
+            wheelHardnessUD.Value = wheelHardessTB.Value;
+        }
+
+        private void truckTightnessUD_ValueChanged(object sender, EventArgs e)
+        {
+            mem.WriteMemory("Skate.crack.exe+53D43C0", "float", truckTightnessUD.Value.ToString());
+        }
+
+        private void wheelHardnessTS_CheckedChanged(object sender, EventArgs e)
+        {
+            if (wheelHardnessTS.Checked)
+            {
+                wheelHardessTB.Enabled = true;
+                wheelHardnessUD.Enabled = true;
+            }
+            else
+            {
+                wheelHardessTB.Enabled = false;
+                wheelHardnessUD.Enabled = false;
+            }
+        }
+
+        private void wheelHardnessUD_ValueChanged(object sender, EventArgs e)
+        {
+            mem.WriteMemory("Skate.crack.exe+53D4350", "float", wheelHardnessUD.Value.ToString());
         }
     }
 }
