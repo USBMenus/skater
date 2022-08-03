@@ -16,6 +16,12 @@
   <br>
   <h1 align="center">change log</h1>
   <br>
+   v3.0
+  <br>
+  ui update
+  <br>
+<img src="images/v3.0.gif" alt="v3.0">
+  <br>
   v2.2
   <br>
   added infinite jump
