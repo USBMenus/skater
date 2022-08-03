@@ -6,21 +6,33 @@
 <h2 align="center">skater</h2>
 
   <p align="center">
-    Skate.crack.exe utility tool made by kikkin_yo_azzez#4943
+    external skate.crack.exe utility tool made by kikkin_yo_azzez#4943
   </p>
-  <h3>warning</h3>
-    do not use this tool in servers as it may result in a ban
-  <h1 align="center">how to download</h1>
+  <h1>warning</h1>
+  do not use this tool in servers as it may result in a ban
+  <h3 align="center">how to download</h3>
   <br>
-  click on the releases tab and select the version you want to download
+  click on the <a href="https://github.com/USBMenus/skater/releases">releases</a> tab and select the version you want to download
   <br>
   <h1 align="center">change log</h1>
   <br>
-  v1.0
+   v3.0
   <br>
-  initial release
+  ui update
   <br>
-<img src="images/screenshot.PNG" alt="v1.0">
+<img src="images/v3.0.gif" alt="v3.0">
+  <br>
+  v2.2
+  <br>
+  added infinite jump
+  <br>
+<img src="images/v2.2.PNG" alt="v2.2">
+  <br>
+  v2.1
+  <br>
+  fixed speed hack and removed console option
+  <br>
+<img src="images/v2.1.png" alt="v2.1">
   <br>
   v2.0
   <br>
@@ -28,10 +40,10 @@
   <br>
 <img src="images/image.png" alt="v2.0">
   <br>
-  v2.1
+  v1.0
   <br>
-  fixed speed hack and removed console option
+  initial release
   <br>
-<img src="images/v2.1.png" alt="v2.1">
+<img src="images/screenshot.PNG" alt="v1.0">
   <br>
 </div>
