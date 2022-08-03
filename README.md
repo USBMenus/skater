@@ -16,6 +16,12 @@
   <br>
   <h1 align="center">change log</h1>
   <br>
+   v3.1
+  <br>
+  added truck tightness and wheel hardness
+  <br>
+<img src="images/v3.1.gif" alt="v3.1">
+  <br>
    v3.0
   <br>
   ui update
