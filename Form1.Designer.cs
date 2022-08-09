@@ -67,6 +67,10 @@ namespace skater
             this.mainTabControl = new Guna.UI2.WinForms.Guna2TabControl();
             this.playerTabPage = new System.Windows.Forms.TabPage();
             this.visualTabPage = new System.Windows.Forms.TabPage();
+            this.headScaleUD = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.headScaleTS = new Guna.UI2.WinForms.Guna2ToggleSwitch();
+            this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.headScaleTB = new Guna.UI2.WinForms.Guna2TrackBar();
             this.miscTabPage = new System.Windows.Forms.TabPage();
             this.truckTightnessTS = new Guna.UI2.WinForms.Guna2ToggleSwitch();
             this.truckTightnessTB = new Guna.UI2.WinForms.Guna2TrackBar();
@@ -76,12 +80,14 @@ namespace skater
             this.wheelHardnessTS = new Guna.UI2.WinForms.Guna2ToggleSwitch();
             this.wheelHardnessUD = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.truckTightnessUD = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.guna2VScrollBar1 = new Guna.UI2.WinForms.Guna2VScrollBar();
             ((System.ComponentModel.ISupportInitialize)(this.rainbowHueUD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fovUD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sunRotationUD)).BeginInit();
             this.mainTabControl.SuspendLayout();
             this.playerTabPage.SuspendLayout();
             this.visualTabPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.headScaleUD)).BeginInit();
             this.miscTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.wheelHardnessUD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.truckTightnessUD)).BeginInit();
@@ -420,7 +426,7 @@ namespace skater
             this.wireframeTS.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(113)))), ((int)(((byte)(255)))));
             this.wireframeTS.CheckedState.InnerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.wireframeTS.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.wireframeTS.Location = new System.Drawing.Point(6, 84);
+            this.wireframeTS.Location = new System.Drawing.Point(6, 110);
             this.wireframeTS.Name = "wireframeTS";
             this.wireframeTS.Size = new System.Drawing.Size(35, 20);
             this.wireframeTS.TabIndex = 13;
@@ -435,7 +441,7 @@ namespace skater
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.White;
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(49, 84);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(49, 110);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             this.guna2HtmlLabel3.Size = new System.Drawing.Size(114, 20);
             this.guna2HtmlLabel3.TabIndex = 68;
@@ -447,7 +453,7 @@ namespace skater
             this.drawPlayersTS.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(113)))), ((int)(((byte)(255)))));
             this.drawPlayersTS.CheckedState.InnerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.drawPlayersTS.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.drawPlayersTS.Location = new System.Drawing.Point(6, 110);
+            this.drawPlayersTS.Location = new System.Drawing.Point(182, 110);
             this.drawPlayersTS.Name = "drawPlayersTS";
             this.drawPlayersTS.Size = new System.Drawing.Size(35, 20);
             this.drawPlayersTS.TabIndex = 14;
@@ -462,7 +468,7 @@ namespace skater
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.White;
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(49, 110);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(225, 110);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(144, 20);
             this.guna2HtmlLabel2.TabIndex = 72;
@@ -611,6 +617,10 @@ namespace skater
             // visualTabPage
             // 
             this.visualTabPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.visualTabPage.Controls.Add(this.headScaleUD);
+            this.visualTabPage.Controls.Add(this.headScaleTS);
+            this.visualTabPage.Controls.Add(this.guna2HtmlLabel6);
+            this.visualTabPage.Controls.Add(this.headScaleTB);
             this.visualTabPage.Controls.Add(this.fovTS);
             this.visualTabPage.Controls.Add(this.sunRotationUD);
             this.visualTabPage.Controls.Add(this.fovTB);
@@ -634,6 +644,85 @@ namespace skater
             this.visualTabPage.Size = new System.Drawing.Size(540, 139);
             this.visualTabPage.TabIndex = 1;
             this.visualTabPage.Text = "Visual";
+            // 
+            // headScaleUD
+            // 
+            this.headScaleUD.AutoRoundedCorners = true;
+            this.headScaleUD.BackColor = System.Drawing.Color.Transparent;
+            this.headScaleUD.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(113)))), ((int)(((byte)(255)))));
+            this.headScaleUD.BorderRadius = 10;
+            this.headScaleUD.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.headScaleUD.DecimalPlaces = 2;
+            this.headScaleUD.Enabled = false;
+            this.headScaleUD.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.headScaleUD.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.headScaleUD.ForeColor = System.Drawing.Color.White;
+            this.headScaleUD.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.headScaleUD.Location = new System.Drawing.Point(182, 84);
+            this.headScaleUD.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.headScaleUD.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            131072});
+            this.headScaleUD.Name = "headScaleUD";
+            this.headScaleUD.Size = new System.Drawing.Size(61, 23);
+            this.headScaleUD.TabIndex = 77;
+            this.headScaleUD.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(113)))), ((int)(((byte)(255)))));
+            this.headScaleUD.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.headScaleUD.ValueChanged += new System.EventHandler(this.headScaleUD_ValueChanged);
+            // 
+            // headScaleTS
+            // 
+            this.headScaleTS.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.headScaleTS.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(113)))), ((int)(((byte)(255)))));
+            this.headScaleTS.CheckedState.InnerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.headScaleTS.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.headScaleTS.Location = new System.Drawing.Point(6, 84);
+            this.headScaleTS.Name = "headScaleTS";
+            this.headScaleTS.Size = new System.Drawing.Size(35, 20);
+            this.headScaleTS.TabIndex = 76;
+            this.headScaleTS.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.headScaleTS.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.headScaleTS.UncheckedState.InnerBorderColor = System.Drawing.Color.White;
+            this.headScaleTS.UncheckedState.InnerColor = System.Drawing.Color.White;
+            this.headScaleTS.CheckedChanged += new System.EventHandler(this.headScaleTS_CheckedChanged);
+            // 
+            // guna2HtmlLabel6
+            // 
+            this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel6.ForeColor = System.Drawing.Color.White;
+            this.guna2HtmlLabel6.Location = new System.Drawing.Point(49, 84);
+            this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
+            this.guna2HtmlLabel6.Size = new System.Drawing.Size(79, 20);
+            this.guna2HtmlLabel6.TabIndex = 79;
+            this.guna2HtmlLabel6.Text = "Head Scale";
+            // 
+            // headScaleTB
+            // 
+            this.headScaleTB.Enabled = false;
+            this.headScaleTB.Location = new System.Drawing.Point(249, 84);
+            this.headScaleTB.Maximum = 10;
+            this.headScaleTB.Minimum = 1;
+            this.headScaleTB.Name = "headScaleTB";
+            this.headScaleTB.Size = new System.Drawing.Size(273, 23);
+            this.headScaleTB.TabIndex = 78;
+            this.headScaleTB.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(113)))), ((int)(((byte)(255)))));
+            this.headScaleTB.Value = 1;
+            this.headScaleTB.Scroll += new System.Windows.Forms.ScrollEventHandler(this.headScaleTB_Scroll);
             // 
             // miscTabPage
             // 
@@ -800,6 +889,18 @@ namespace skater
             this.truckTightnessUD.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(113)))), ((int)(((byte)(255)))));
             this.truckTightnessUD.ValueChanged += new System.EventHandler(this.truckTightnessUD_ValueChanged);
             // 
+            // guna2VScrollBar1
+            // 
+            this.guna2VScrollBar1.InUpdate = false;
+            this.guna2VScrollBar1.LargeChange = 82;
+            this.guna2VScrollBar1.Location = new System.Drawing.Point(519, 6);
+            this.guna2VScrollBar1.Maximum = 129;
+            this.guna2VScrollBar1.Name = "guna2VScrollBar1";
+            this.guna2VScrollBar1.ScrollbarSize = 18;
+            this.guna2VScrollBar1.Size = new System.Drawing.Size(18, 127);
+            this.guna2VScrollBar1.SmallChange = 5;
+            this.guna2VScrollBar1.TabIndex = 80;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -830,6 +931,7 @@ namespace skater
             this.playerTabPage.PerformLayout();
             this.visualTabPage.ResumeLayout(false);
             this.visualTabPage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.headScaleUD)).EndInit();
             this.miscTabPage.ResumeLayout(false);
             this.miscTabPage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.wheelHardnessUD)).EndInit();
@@ -885,6 +987,11 @@ namespace skater
         private Guna.UI2.WinForms.Guna2ToggleSwitch wheelHardnessTS;
         private Guna.UI2.WinForms.Guna2NumericUpDown wheelHardnessUD;
         private Guna.UI2.WinForms.Guna2NumericUpDown truckTightnessUD;
+        private Guna.UI2.WinForms.Guna2NumericUpDown headScaleUD;
+        private Guna.UI2.WinForms.Guna2ToggleSwitch headScaleTS;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
+        private Guna.UI2.WinForms.Guna2TrackBar headScaleTB;
+        private Guna.UI2.WinForms.Guna2VScrollBar guna2VScrollBar1;
     }
 }
 

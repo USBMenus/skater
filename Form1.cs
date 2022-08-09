@@ -325,5 +325,31 @@ namespace skater
         {
             mem.WriteMemory("Skate.crack.exe+53D4350", "float", wheelHardnessUD.Value.ToString());
         }
+
+        private void headScaleUD_ValueChanged(object sender, EventArgs e)
+        {
+            mem.WriteMemory("Skate.crack.exe+084E5868,E30,38,C00", "float", headScaleUD.Value.ToString());
+            mem.WriteMemory("Skate.crack.exe+084E5868,E30,38,C04", "float", headScaleUD.Value.ToString());
+            mem.WriteMemory("Skate.crack.exe+084E5868,E30,38,C08", "float", headScaleUD.Value.ToString());
+        }
+
+        private void headScaleTS_CheckedChanged(object sender, EventArgs e)
+        {
+            if (headScaleTS.Checked)
+            {
+                headScaleUD.Enabled = true;
+                headScaleTB.Enabled = true;
+            } 
+            else
+            {
+                headScaleUD.Enabled = false;
+                headScaleTB.Enabled = false;
+            }
+        }
+
+        private void headScaleTB_Scroll(object sender, ScrollEventArgs e)
+        {
+            headScaleUD.Value = headScaleTB.Value;
+        }
     }
 }
