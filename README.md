@@ -10,6 +10,7 @@
   </p>
   <h1>warning</h1>
   do not use this tool in servers as it may result in a ban
+  all visual effects are client side
   <h3 align="center">how to download</h3>
   <br>
   click on the <a href="https://github.com/USBMenus/skater/releases">releases</a> tab and select the version you want to download
