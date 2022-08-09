@@ -18,6 +18,12 @@
   <br>
   <h1 align="center">change log</h1>
   <br>
+   v3.2
+  <br>
+  added head scale
+  <br>
+<img src="images/v3.2.gif" alt="v3.1">
+  <br>
    v3.1
   <br>
   added truck tightness and wheel hardness
