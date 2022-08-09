@@ -10,6 +10,7 @@
   </p>
   <h1>warning</h1>
   do not use this tool in servers as it may result in a ban
+  <br>
   all visual effects are client side
   <h3 align="center">how to download</h3>
   <br>
