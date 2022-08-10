@@ -245,6 +245,7 @@ namespace skater
             drawPlayersTS.Enabled = true;
             truckTightnessTS.Enabled = true;
             wheelHardnessTS.Enabled = true;
+            scaleTS.Enabled = true;
         }
 
         void disableAll()
@@ -268,6 +269,10 @@ namespace skater
             wheelHardnessTS.Enabled = false;
             wheelHardnessUD.Enabled = false;
             wheelHardessTB.Enabled = false;
+            scaleCB.Enabled = false;
+            scaleTS.Enabled = false;
+            scaleTB.Enabled = false;
+            scaleUD.Enabled = false;
         }
 
         private void infJumpTS_CheckedChanged(object sender, EventArgs e)
@@ -328,28 +333,76 @@ namespace skater
 
         private void headScaleUD_ValueChanged(object sender, EventArgs e)
         {
-            mem.WriteMemory("Skate.crack.exe+084E5868,E30,38,C00", "float", headScaleUD.Value.ToString());
-            mem.WriteMemory("Skate.crack.exe+084E5868,E30,38,C04", "float", headScaleUD.Value.ToString());
-            mem.WriteMemory("Skate.crack.exe+084E5868,E30,38,C08", "float", headScaleUD.Value.ToString());
+            if (scaleCB.SelectedIndex == 0)
+            {
+                //Head Scale
+                mem.WriteMemory("Skate.crack.exe+084E5868,E30,38,C00", "float", scaleUD.Value.ToString());
+                mem.WriteMemory("Skate.crack.exe+084E5868,E30,38,C04", "float", scaleUD.Value.ToString());
+                mem.WriteMemory("Skate.crack.exe+084E5868,E30,38,C08", "float", scaleUD.Value.ToString());
+            }
+            else if (scaleCB.SelectedIndex == 1)
+            {
+                //Right Arm
+                mem.WriteMemory("Skate.crack.exe+084E5868,E30,38,4E0", "float", scaleUD.Value.ToString());
+                mem.WriteMemory("Skate.crack.exe+084E5868,E30,38,4E4", "float", scaleUD.Value.ToString());
+                mem.WriteMemory("Skate.crack.exe+084E5868,E30,38,4E8", "float", scaleUD.Value.ToString());
+
+                //Left Arm
+                mem.WriteMemory("Skate.crack.exe+084E5868,E30,38,C90", "float", scaleUD.Value.ToString());
+                mem.WriteMemory("Skate.crack.exe+084E5868,E30,38,C94", "float", scaleUD.Value.ToString());
+                mem.WriteMemory("Skate.crack.exe+084E5868,E30,38,C98", "float", scaleUD.Value.ToString());
+            }
+            else if (scaleCB.SelectedIndex == 2)
+            {
+                //Left Leg
+                mem.WriteMemory("Skate.crack.exe+084E5868,E30,38,1350", "float", scaleUD.Value.ToString());
+                mem.WriteMemory("Skate.crack.exe+084E5868,E30,38,1354", "float", scaleUD.Value.ToString());
+                mem.WriteMemory("Skate.crack.exe+084E5868,E30,38,1358", "float", scaleUD.Value.ToString());
+
+                //Right Leg
+                mem.WriteMemory("Skate.crack.exe+084E5868,E30,38,180", "float", scaleUD.Value.ToString());
+                mem.WriteMemory("Skate.crack.exe+084E5868,E30,38,184", "float", scaleUD.Value.ToString());
+                mem.WriteMemory("Skate.crack.exe+084E5868,E30,38,188", "float", scaleUD.Value.ToString());
+            }
+            else if (scaleCB.SelectedIndex == 3)
+            {
+                //Right Foot
+                mem.WriteMemory("Skate.crack.exe+084E5868,E30,38,1E0", "float", scaleUD.Value.ToString());
+                mem.WriteMemory("Skate.crack.exe+084E5868,E30,38,1E4", "float", scaleUD.Value.ToString());
+                mem.WriteMemory("Skate.crack.exe+084E5868,E30,38,1E8", "float", scaleUD.Value.ToString());
+
+                //Left Foot
+                mem.WriteMemory("Skate.crack.exe+084E5868,E30,38,13B0", "float", scaleUD.Value.ToString());
+                mem.WriteMemory("Skate.crack.exe+084E5868,E30,38,13B4", "float", scaleUD.Value.ToString());
+                mem.WriteMemory("Skate.crack.exe+084E5868,E30,38,13B8", "float", scaleUD.Value.ToString());
+
+            }
         }
 
         private void headScaleTS_CheckedChanged(object sender, EventArgs e)
         {
-            if (headScaleTS.Checked)
+            if (scaleTS.Checked)
             {
-                headScaleUD.Enabled = true;
-                headScaleTB.Enabled = true;
+                scaleUD.Enabled = true;
+                scaleTB.Enabled = true;
+                scaleCB.Enabled = true;
             } 
             else
             {
-                headScaleUD.Enabled = false;
-                headScaleTB.Enabled = false;
+                scaleUD.Enabled = false;
+                scaleTB.Enabled = false;
+                scaleCB.Enabled = false;
             }
         }
 
         private void headScaleTB_Scroll(object sender, ScrollEventArgs e)
         {
-            headScaleUD.Value = headScaleTB.Value;
+            scaleUD.Value = scaleTB.Value;
+        }
+
+        public void mainTabControl_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            MessageBox.Show(mainTabControl.SelectedIndex.ToString());
         }
     }
 }
