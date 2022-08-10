@@ -18,11 +18,17 @@
   <br>
   <h1 align="center">change log</h1>
   <br>
+   v3.3
+  <br>
+  added arms, legs and feet scale
+  <br>
+<img src="images/v3.3.png" alt="v3.3">
+  <br>
    v3.2
   <br>
   added head scale
   <br>
-<img src="images/v3.2.gif" alt="v3.1">
+<img src="images/v3.2.png" alt="v3.2">
   <br>
    v3.1
   <br>
